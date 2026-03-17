@@ -1,24 +1,26 @@
 import { Blocks, Bot, Code2, Database, Layers3, Wrench } from "lucide-react";
 import SectionHeading from "./SectionHeading";
 import AxisReveal from "./AxisReveal";
-import { skillsData } from "../data";
+import { skillsData, uiText } from "../data";
 
 const iconMap = {
   languages: Code2,
+  "fullstack-web": Blocks,
   "backend-architecture": Layers3,
   database: Database,
-  frontend: Blocks,
-  "ai-vision": Bot,
-  tools: Wrench
+  "ai-ml-vision": Bot,
+  "desktop-tools": Wrench
 };
 
-function SkillsSection() {
+const textByLang = (value, language) => (typeof value === "string" ? value : value?.[language] || "");
+
+function SkillsSection({ language }) {
   return (
     <section id="skills" className="section-space">
       <SectionHeading
-        eyebrow="Skills"
-        title="Practical technical stack built through system implementation."
-        description="No inflated claims, just the technologies I actively use in coursework, projects, and engineering practice."
+        eyebrow={textByLang(uiText.skills.eyebrow, language)}
+        title={textByLang(uiText.skills.title, language)}
+        description={textByLang(uiText.skills.description, language)}
       />
 
       <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
@@ -38,7 +40,7 @@ function SkillsSection() {
             >
               <p className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.13em] text-sky-300/80">
                 <Icon size={14} />
-                {group.title}
+                {textByLang(group.title, language)}
               </p>
 
               <div className="mt-4 flex flex-wrap gap-2">

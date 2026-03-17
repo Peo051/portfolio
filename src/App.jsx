@@ -12,16 +12,22 @@ import Footer from "./components/Footer";
 import { siteConfig } from "./data";
 
 const sectionIds = ["about", "journey", "skills", "projects", "achievements", "contact"];
+const STORAGE_KEY = "portfolio-language";
 
 function App() {
+  const [language, setLanguage] = useState(() => {
+    if (typeof window === "undefined") return "en";
+    return window.localStorage.getItem(STORAGE_KEY) || "en";
+  });
   const [activeSection, setActiveSection] = useState("about");
 
   useEffect(() => {
-    document.title = siteConfig.seo.title;
+    document.title = siteConfig.seo.title[language];
+    document.documentElement.lang = language;
 
     const descriptionTag = document.querySelector('meta[name="description"]');
     if (descriptionTag) {
-      descriptionTag.setAttribute("content", siteConfig.seo.description);
+      descriptionTag.setAttribute("content", siteConfig.seo.description[language]);
     }
 
     const sections = sectionIds.map((id) => document.getElementById(id)).filter(Boolean);
@@ -41,24 +47,28 @@ function App() {
 
     sections.forEach((section) => observer.observe(section));
     return () => observer.disconnect();
-  }, []);
+  }, [language]);
+
+  useEffect(() => {
+    window.localStorage.setItem(STORAGE_KEY, language);
+  }, [language]);
 
   return (
     <div className="relative min-h-screen overflow-x-clip bg-bg text-text">
       <BackgroundEffects />
-      <Navbar activeSection={activeSection} />
+      <Navbar activeSection={activeSection} language={language} onLanguageChange={setLanguage} />
 
       <main className="relative z-10 mx-auto w-full max-w-6xl px-5 pb-24 sm:px-8">
-        <HeroSection />
-        <AboutSection />
-        <JourneySection />
-        <SkillsSection />
-        <ProjectsSection />
-        <AchievementsSection />
-        <ContactSection />
+        <HeroSection language={language} />
+        <AboutSection language={language} />
+        <JourneySection language={language} />
+        <SkillsSection language={language} />
+        <ProjectsSection language={language} />
+        <AchievementsSection language={language} />
+        <ContactSection language={language} />
       </main>
 
-      <Footer />
+      <Footer language={language} />
     </div>
   );
 }

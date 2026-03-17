@@ -1,18 +1,14 @@
 import { useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { siteConfig } from "../data";
+import { siteConfig, uiText } from "../data";
+import LanguageSwitcher from "./LanguageSwitcher";
 
-const navItems = [
-  { label: siteConfig.sections.about, href: "#about", id: "about" },
-  { label: siteConfig.sections.journey, href: "#journey", id: "journey" },
-  { label: siteConfig.sections.skills, href: "#skills", id: "skills" },
-  { label: siteConfig.sections.projects, href: "#projects", id: "projects" },
-  { label: siteConfig.sections.achievements, href: "#achievements", id: "achievements" },
-  { label: siteConfig.sections.contact, href: "#contact", id: "contact" }
-];
+const navItems = ["about", "journey", "skills", "projects", "achievements", "contact"];
 
-function Navbar({ activeSection }) {
+const textByLang = (value, language) => (typeof value === "string" ? value : value?.[language] || "");
+
+function Navbar({ activeSection, language, onLanguageChange }) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -38,29 +34,32 @@ function Navbar({ activeSection }) {
           {siteConfig.nav.brand}
         </a>
 
-        <ul className="hidden items-center gap-1 lg:flex">
+        <ul className="hidden items-center gap-1 lg:flex" role="list">
           {navItems.map((item) => (
-            <li key={item.id}>
+            <li key={item}>
               <a
-                href={item.href}
+                href={`#${siteConfig.sections[item]}`}
                 className={`focus-ring rounded-xl px-3 py-2 text-sm transition ${
-                  activeSection === item.id
+                  activeSection === item
                     ? "bg-sky-400/12 text-sky-200"
                     : "text-slate-300 hover:bg-slate-800/70 hover:text-slate-100"
                 }`}
               >
-                {item.label}
+                {textByLang(uiText.sectionLabels[item], language)}
               </a>
             </li>
           ))}
         </ul>
 
         <div className="flex items-center gap-2">
+          <div className="hidden md:block">
+            <LanguageSwitcher language={language} onLanguageChange={onLanguageChange} />
+          </div>
           <a
             href={siteConfig.nav.ctaHref}
             className="focus-ring hidden rounded-xl bg-gradient-to-r from-cyan-400 to-indigo-500 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:brightness-110 sm:inline-flex"
           >
-            {siteConfig.nav.ctaLabel}
+            {textByLang(uiText.navCta, language)}
           </a>
           <button
             type="button"
@@ -85,17 +84,21 @@ function Navbar({ activeSection }) {
             transition={{ duration: 0.22 }}
             className="mx-auto mt-2 max-w-6xl rounded-2xl border border-line bg-slate-950/92 p-3 backdrop-blur-xl lg:hidden"
           >
+            <div className="mb-3 flex items-center justify-between rounded-xl border border-line bg-slate-900/60 px-3 py-2">
+              <span className="text-xs text-slate-300">{textByLang(uiText.languageLabel, language)}</span>
+              <LanguageSwitcher language={language} onLanguageChange={onLanguageChange} />
+            </div>
             <ul className="space-y-1">
               {navItems.map((item) => (
-                <li key={item.id}>
+                <li key={item}>
                   <a
-                    href={item.href}
+                    href={`#${siteConfig.sections[item]}`}
                     onClick={() => setOpen(false)}
                     className={`focus-ring block rounded-lg px-3 py-2 text-sm transition ${
-                      activeSection === item.id ? "bg-sky-400/10 text-sky-200" : "text-slate-200 hover:bg-slate-800/80"
+                      activeSection === item ? "bg-sky-400/10 text-sky-200" : "text-slate-200 hover:bg-slate-800/80"
                     }`}
                   >
-                    {item.label}
+                    {textByLang(uiText.sectionLabels[item], language)}
                   </a>
                 </li>
               ))}
@@ -105,7 +108,7 @@ function Navbar({ activeSection }) {
                   onClick={() => setOpen(false)}
                   className="focus-ring mt-2 inline-flex w-full justify-center rounded-lg bg-gradient-to-r from-cyan-400 to-indigo-500 px-3 py-2 text-sm font-semibold text-slate-950"
                 >
-                  {siteConfig.nav.ctaLabel}
+                  {textByLang(uiText.navCta, language)}
                 </a>
               </li>
             </ul>

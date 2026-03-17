@@ -1,59 +1,61 @@
 import { Compass, GraduationCap, MapPin, Target } from "lucide-react";
 import AxisReveal from "./AxisReveal";
 import SectionHeading from "./SectionHeading";
-import { personalInfo } from "../data";
+import { personalInfo, uiText } from "../data";
 
-const infoCards = [
-  {
-    id: "location",
-    icon: MapPin,
-    label: "Location",
-    value: personalInfo.location
-  },
-  {
-    id: "education",
-    icon: GraduationCap,
-    label: "Education",
-    value: `${personalInfo.school} - ${personalInfo.major}`
-  },
-  {
-    id: "focus",
-    icon: Compass,
-    label: "Focus",
-    value: "Backend engineering, system logic, and relational database design"
-  },
-  {
-    id: "goal",
-    icon: Target,
-    label: "Current Goal",
-    value: "Internship / Fresher opportunities with strong technical mentorship"
-  }
-];
+const textByLang = (value, language) => (typeof value === "string" ? value : value?.[language] || "");
 
-function AboutSection() {
+function AboutSection({ language }) {
+  const infoCards = [
+    {
+      id: "location",
+      icon: MapPin,
+      label: textByLang(uiText.about.cards.location, language),
+      value: personalInfo.location
+    },
+    {
+      id: "education",
+      icon: GraduationCap,
+      label: textByLang(uiText.about.cards.education, language),
+      value: `${personalInfo.school} - ${personalInfo.major}`
+    },
+    {
+      id: "focus",
+      icon: Compass,
+      label: textByLang(uiText.about.cards.focus, language),
+      value: textByLang(uiText.about.focusValue, language)
+    },
+    {
+      id: "goal",
+      icon: Target,
+      label: textByLang(uiText.about.cards.goal, language),
+      value: textByLang(personalInfo.currentGoal, language)
+    }
+  ];
+
   return (
     <section id="about" className="section-space">
       <SectionHeading
-        eyebrow="About"
-        title="A software engineering profile centered on fundamentals and system-level thinking."
-        description="I prioritize backend reliability, maintainable architecture, and technical clarity over superficial complexity."
+        eyebrow={textByLang(uiText.about.eyebrow, language)}
+        title={textByLang(uiText.about.title, language)}
+        description={textByLang(uiText.about.description, language)}
       />
 
       <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
         <AxisReveal as="article" axis="x-reverse" distance={24} className="surface-card p-6 sm:p-8">
           <h3 className="text-xl font-semibold text-slate-100">{personalInfo.name}</h3>
-          <p className="mt-1 text-sm text-sky-200">{personalInfo.role}</p>
+          <p className="mt-1 text-sm text-sky-200">{textByLang(personalInfo.role, language)}</p>
 
           <div className="mt-5 space-y-4 text-sm leading-relaxed text-slate-300 sm:text-base">
-            {personalInfo.aboutParagraphs.map((paragraph) => (
+            {personalInfo.aboutParagraphs[language].map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
             ))}
           </div>
 
           <div className="mt-6">
-            <p className="section-eyebrow">Currently Exploring</p>
+            <p className="section-eyebrow">{textByLang(uiText.about.exploring, language)}</p>
             <div className="mt-3 flex flex-wrap gap-2">
-              {personalInfo.currentlyExploring.map((area) => (
+              {personalInfo.currentlyExploring[language].map((area) => (
                 <span key={area} className="chip">
                   {area}
                 </span>

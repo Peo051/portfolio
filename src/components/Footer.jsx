@@ -1,15 +1,19 @@
 import { Github, Linkedin, Mail } from "lucide-react";
-import { personalInfo, socialLinks } from "../data";
+import { personalInfo, socialLinks, uiText } from "../data";
 
 const socialMap = Object.fromEntries(socialLinks.map((item) => [item.id, item.href]));
+const textByLang = (value, language) => (typeof value === "string" ? value : value?.[language] || "");
 
-function Footer() {
+function Footer({ language }) {
   return (
     <footer className="relative z-10 border-t border-line/70 bg-slate-950/50 py-8">
       <div className="mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-4 px-5 text-sm text-slate-400 sm:flex-row sm:px-8">
-        <p>
-          {new Date().getFullYear()} &copy; {personalInfo.displayName}. Engineering-first portfolio.
-        </p>
+        <div>
+          <p>
+            {new Date().getFullYear()} &copy; {personalInfo.displayName}.
+          </p>
+          <p className="mt-1 text-xs text-slate-500">{textByLang(uiText.footer.microcopy, language)}</p>
+        </div>
 
         <div className="flex items-center gap-2">
           <a

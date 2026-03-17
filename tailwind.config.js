@@ -4,17 +4,18 @@ export default {
   theme: {
     extend: {
       colors: {
-        bg: "#060b16",
-        panel: "#0d1424",
-        line: "rgba(147, 197, 253, 0.16)",
-        text: "#dbeafe",
-        muted: "#93a4c5",
+        bg: "#040816",
+        panel: "#0d1528",
+        line: "rgba(148, 163, 184, 0.2)",
+        text: "#e2e8f0",
+        muted: "#94a3b8",
         accent: "#38bdf8",
         indigo: "#6366f1",
         violet: "#8b5cf6"
       },
       fontFamily: {
-        sans: ["Space Grotesk", "system-ui", "sans-serif"],
+        sans: ["Inter", "system-ui", "sans-serif"],
+        heading: ["Sora", "Inter", "sans-serif"],
         mono: ["JetBrains Mono", "ui-monospace", "monospace"]
       },
       boxShadow: {

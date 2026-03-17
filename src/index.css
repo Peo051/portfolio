@@ -12,17 +12,27 @@ html {
 
 body {
   margin: 0;
-  background: #060b16;
-  color: #dbeafe;
-  font-family: "Space Grotesk", system-ui, sans-serif;
   min-height: 100vh;
-  background-image: radial-gradient(circle at 8% 14%, rgba(56, 189, 248, 0.08), transparent 36%),
-    radial-gradient(circle at 87% 12%, rgba(99, 102, 241, 0.12), transparent 34%),
-    radial-gradient(circle at 72% 82%, rgba(139, 92, 246, 0.1), transparent 33%);
+  background: #040816;
+  color: #e2e8f0;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  background-image: radial-gradient(circle at 12% 12%, rgba(34, 211, 238, 0.08), transparent 36%),
+    radial-gradient(circle at 82% 8%, rgba(99, 102, 241, 0.11), transparent 34%),
+    radial-gradient(circle at 72% 82%, rgba(139, 92, 246, 0.08), transparent 36%);
 }
 
 * {
   box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Sora", "Inter", sans-serif;
+  letter-spacing: -0.02em;
 }
 
 ::selection {
@@ -32,7 +42,7 @@ body {
 
 @layer components {
   .surface-card {
-    @apply rounded-3xl border border-line bg-panel/70 shadow-card backdrop-blur;
+    @apply rounded-3xl border border-line bg-panel/70 shadow-card backdrop-blur-md;
   }
 
   .chip {
@@ -45,5 +55,32 @@ body {
 
   .focus-ring {
     @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-bg;
+  }
+
+  .section-eyebrow {
+    @apply font-mono text-xs uppercase tracking-[0.2em] text-sky-300/85;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-cyan-400 to-indigo-500 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:brightness-110;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 rounded-xl border border-line bg-slate-900/70 px-5 py-3 text-sm font-semibold text-slate-100 transition hover:border-sky-300/30 hover:bg-slate-800;
+  }
+
+  .profile-frame {
+    @apply relative overflow-hidden rounded-[28px] border border-sky-300/30 bg-slate-900/70 p-2 shadow-[0_16px_60px_rgba(2,8,24,0.55),0_0_0_1px_rgba(56,189,248,0.18)];
+  }
+
+  .profile-frame::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: 28px;
+    background: linear-gradient(130deg, rgba(34, 211, 238, 0.45), rgba(99, 102, 241, 0.55), rgba(139, 92, 246, 0.4));
+    filter: blur(18px);
+    opacity: 0.45;
+    z-index: -1;
   }
 }

@@ -1,17 +1,10 @@
 import { motion } from "framer-motion";
 
-function getAxisOffset(axis, distance) {
-  switch (axis) {
-    case "x":
-      return { x: distance, y: 0 };
-    case "x-reverse":
-      return { x: -distance, y: 0 };
-    case "y-reverse":
-      return { x: 0, y: -distance };
-    case "y":
-    default:
-      return { x: 0, y: distance };
-  }
+function getInitialOffset(axis, distance) {
+  if (axis === "x") return { x: distance, y: 0 };
+  if (axis === "x-reverse") return { x: -distance, y: 0 };
+  if (axis === "y-reverse") return { x: 0, y: -distance };
+  return { x: 0, y: distance };
 }
 
 function AxisReveal({
@@ -19,22 +12,22 @@ function AxisReveal({
   axis = "y",
   distance = 24,
   delay = 0,
-  duration = 0.55,
+  duration = 0.6,
   amount = 0.35,
   once = true,
-  className,
+  className = "",
   children,
   ...props
 }) {
   const MotionTag = motion(as);
-  const offset = getAxisOffset(axis, distance);
+  const initialOffset = getInitialOffset(axis, distance);
 
   return (
     <MotionTag
-      initial={{ opacity: 0, ...offset }}
+      initial={{ opacity: 0, ...initialOffset }}
       whileInView={{ opacity: 1, x: 0, y: 0 }}
       viewport={{ once, amount }}
-      transition={{ duration, delay, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration, delay, ease: [0.2, 0.85, 0.25, 1] }}
       className={className}
       {...props}
     >

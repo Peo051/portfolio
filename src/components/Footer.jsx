@@ -1,17 +1,14 @@
 import { Github, Linkedin, Mail } from "lucide-react";
-import { personalInfo } from "../data/portfolioData";
-import { useLanguage } from "../context/LanguageContext";
+import { personalInfo } from "../data";
 
 function Footer() {
-  const { language } = useLanguage();
-
   return (
     <footer className="relative z-10 border-t border-line/70 bg-slate-950/50 py-8">
-      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-5 text-sm text-slate-400 sm:flex-row sm:px-8">
+      <div className="mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-4 px-5 text-sm text-slate-400 sm:flex-row sm:px-8">
         <p>
-          &copy; {new Date().getFullYear()} {personalInfo.name}.{" "}
-          {language === "vi" ? "Xây dựng với tư duy kỹ sư." : "Built with engineering focus."}
+          {new Date().getFullYear()} &copy; {personalInfo.displayName}. Built with technical focus.
         </p>
+
         <div className="flex items-center gap-2">
           <a
             href={personalInfo.github}

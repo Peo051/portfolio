@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #060b16;
+  color: #dbeafe;
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  min-height: 100vh;
+  background-image: radial-gradient(circle at 8% 14%, rgba(56, 189, 248, 0.08), transparent 36%),
+    radial-gradient(circle at 87% 12%, rgba(99, 102, 241, 0.12), transparent 34%),
+    radial-gradient(circle at 72% 82%, rgba(139, 92, 246, 0.1), transparent 33%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: rgba(56, 189, 248, 0.24);
+  color: #e0f2fe;
+}
+
+@layer components {
+  .surface-card {
+    @apply rounded-3xl border border-line bg-panel/70 shadow-card backdrop-blur;
+  }
+
+  .chip {
+    @apply rounded-full border border-sky-300/20 bg-sky-400/10 px-3 py-1 text-xs font-medium text-sky-200;
+  }
+
+  .section-space {
+    @apply mt-28;
+  }
+
+  .focus-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-bg;
+  }
+}

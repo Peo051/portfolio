@@ -23,7 +23,8 @@ function AxisReveal({
   amount = 0.35,
   once = true,
   className,
-  children
+  children,
+  ...props
 }) {
   const MotionTag = motion(as);
   const offset = getAxisOffset(axis, distance);
@@ -35,6 +36,7 @@ function AxisReveal({
       viewport={{ once, amount }}
       transition={{ duration, delay, ease: [0.22, 1, 0.36, 1] }}
       className={className}
+      {...props}
     >
       {children}
     </MotionTag>

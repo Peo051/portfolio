@@ -20,7 +20,7 @@ function JourneySection() {
 
       <div className="surface-card space-y-8 p-6 sm:p-8">
         {journey.map((item, index) => (
-          <TimelineItem key={item.title} item={item} index={index} />
+          <TimelineItem key={`${item.year}-${item.title.en}`} item={item} index={index} />
         ))}
       </div>
     </section>

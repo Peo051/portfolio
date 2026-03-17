@@ -6,7 +6,7 @@ import { useLanguage } from "../context/LanguageContext";
 import LanguageToggle from "./LanguageToggle";
 
 function Navbar({ activeSection }) {
-  const { text, language } = useLanguage();
+  const { language } = useLanguage();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 

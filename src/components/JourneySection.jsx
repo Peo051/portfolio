@@ -1,14 +1,21 @@
 import SectionHeading from "./SectionHeading";
 import TimelineItem from "./TimelineItem";
 import { journey } from "../data/portfolioData";
+import { useLanguage } from "../context/LanguageContext";
 
 function JourneySection() {
+  const { language } = useLanguage();
+
   return (
     <section id="journey" className="section-space">
       <SectionHeading
-        eyebrow="Academic & Technical Journey"
-        title="From software fundamentals to applied AI exploration."
-        description="A growth path shaped by coursework, project implementation, competitions, and hands-on experimentation."
+        eyebrow={language === "vi" ? "Hành Trình Học Tập & Kỹ Thuật" : "Academic & Technical Journey"}
+        title={language === "vi" ? "Từ nền tảng phần mềm đến AI ứng dụng." : "From software fundamentals to applied AI exploration."}
+        description={
+          language === "vi"
+            ? "Lộ trình phát triển đi qua học phần, triển khai dự án, thi kỹ thuật và thử nghiệm thực tế."
+            : "A growth path shaped by coursework, project implementation, competitions, and hands-on experimentation."
+        }
       />
 
       <div className="surface-card space-y-8 p-6 sm:p-8">

@@ -10,8 +10,8 @@ export default {
         text: "#e2e8f0",
         muted: "#94a3b8",
         accent: "#38bdf8",
-        indigo: "#6366f1",
-        violet: "#8b5cf6"
+        brandIndigo: "#6366f1",
+        brandViolet: "#8b5cf6"
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],

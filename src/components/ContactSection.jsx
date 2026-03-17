@@ -1,7 +1,9 @@
 import { ArrowUpRight, Github, Linkedin, Mail } from "lucide-react";
 import SectionHeading from "./SectionHeading";
 import AxisReveal from "./AxisReveal";
-import { personalInfo } from "../data";
+import { personalInfo, socialLinks } from "../data";
+
+const socialMap = Object.fromEntries(socialLinks.map((item) => [item.id, item.href]));
 
 function ContactSection() {
   return (
@@ -9,7 +11,7 @@ function ContactSection() {
       <SectionHeading
         eyebrow="Contact"
         title="Let&apos;s Build Something Meaningful"
-        description="Open to internship and collaborative engineering opportunities where disciplined backend and system-building work is valued."
+        description="Open to internship and collaborative engineering opportunities where strong fundamentals and disciplined execution are valued."
       />
 
       <div className="grid gap-6 lg:grid-cols-[1fr_auto]">
@@ -29,7 +31,7 @@ function ContactSection() {
               <ArrowUpRight size={14} className="ml-auto" />
             </a>
             <a
-              href={personalInfo.github}
+              href={socialMap.github}
               target="_blank"
               rel="noreferrer"
               className="focus-ring inline-flex items-center gap-2 rounded-xl border border-line bg-slate-900/70 px-4 py-3 text-sm text-slate-200 transition hover:border-sky-300/35 hover:text-slate-100"
@@ -39,7 +41,7 @@ function ContactSection() {
               <ArrowUpRight size={14} className="ml-auto" />
             </a>
             <a
-              href={personalInfo.linkedin}
+              href={socialMap.linkedin}
               target="_blank"
               rel="noreferrer"
               className="focus-ring inline-flex items-center gap-2 rounded-xl border border-line bg-slate-900/70 px-4 py-3 text-sm text-slate-200 transition hover:border-sky-300/35 hover:text-slate-100"

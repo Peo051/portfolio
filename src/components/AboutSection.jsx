@@ -14,7 +14,7 @@ const infoCards = [
     id: "education",
     icon: GraduationCap,
     label: "Education",
-    value: personalInfo.school
+    value: `${personalInfo.school} - ${personalInfo.major}`
   },
   {
     id: "focus",
@@ -35,8 +35,8 @@ function AboutSection() {
     <section id="about" className="section-space">
       <SectionHeading
         eyebrow="About"
-        title="Engineering fundamentals, disciplined execution, and steady long-term growth."
-        description="A profile centered on technical maturity, structured thinking, and practical system-building."
+        title="A software engineering profile centered on fundamentals and system-level thinking."
+        description="I prioritize backend reliability, maintainable architecture, and technical clarity over superficial complexity."
       />
 
       <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
@@ -48,6 +48,17 @@ function AboutSection() {
             {personalInfo.aboutParagraphs.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
             ))}
+          </div>
+
+          <div className="mt-6">
+            <p className="section-eyebrow">Currently Exploring</p>
+            <div className="mt-3 flex flex-wrap gap-2">
+              {personalInfo.currentlyExploring.map((area) => (
+                <span key={area} className="chip">
+                  {area}
+                </span>
+              ))}
+            </div>
           </div>
 
           <div className="mt-6 flex flex-wrap gap-2">

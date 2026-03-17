@@ -1,15 +1,15 @@
 import { useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { personalInfo } from "../data";
+import { siteConfig } from "../data";
 
 const navItems = [
-  { label: "About", href: "#about", id: "about" },
-  { label: "Journey", href: "#journey", id: "journey" },
-  { label: "Skills", href: "#skills", id: "skills" },
-  { label: "Projects", href: "#projects", id: "projects" },
-  { label: "Achievements", href: "#achievements", id: "achievements" },
-  { label: "Contact", href: "#contact", id: "contact" }
+  { label: siteConfig.sections.about, href: "#about", id: "about" },
+  { label: siteConfig.sections.journey, href: "#journey", id: "journey" },
+  { label: siteConfig.sections.skills, href: "#skills", id: "skills" },
+  { label: siteConfig.sections.projects, href: "#projects", id: "projects" },
+  { label: siteConfig.sections.achievements, href: "#achievements", id: "achievements" },
+  { label: siteConfig.sections.contact, href: "#contact", id: "contact" }
 ];
 
 function Navbar({ activeSection }) {
@@ -19,7 +19,7 @@ function Navbar({ activeSection }) {
   const navbarClasses = useMemo(
     () =>
       `mx-auto flex max-w-6xl items-center justify-between rounded-2xl border px-4 py-3 transition-all sm:px-6 ${
-        scrolled ? "border-line bg-slate-950/70 shadow-glow backdrop-blur-xl" : "border-transparent bg-transparent"
+        scrolled ? "border-line bg-slate-950/75 shadow-glow backdrop-blur-xl" : "border-transparent bg-transparent"
       }`,
     [scrolled]
   );
@@ -35,7 +35,7 @@ function Navbar({ activeSection }) {
     <header className="sticky top-0 z-50 pt-4">
       <nav className={navbarClasses} aria-label="Primary navigation">
         <a href="#top" className="focus-ring text-sm font-semibold tracking-wide text-slate-100 sm:text-base">
-          {personalInfo.displayName}
+          {siteConfig.nav.brand}
         </a>
 
         <ul className="hidden items-center gap-1 lg:flex">
@@ -57,10 +57,10 @@ function Navbar({ activeSection }) {
 
         <div className="flex items-center gap-2">
           <a
-            href="#projects"
+            href={siteConfig.nav.ctaHref}
             className="focus-ring hidden rounded-xl bg-gradient-to-r from-cyan-400 to-indigo-500 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:brightness-110 sm:inline-flex"
           >
-            View Projects
+            {siteConfig.nav.ctaLabel}
           </a>
           <button
             type="button"
@@ -91,7 +91,9 @@ function Navbar({ activeSection }) {
                   <a
                     href={item.href}
                     onClick={() => setOpen(false)}
-                    className="focus-ring block rounded-lg px-3 py-2 text-sm text-slate-200 hover:bg-slate-800/80"
+                    className={`focus-ring block rounded-lg px-3 py-2 text-sm transition ${
+                      activeSection === item.id ? "bg-sky-400/10 text-sky-200" : "text-slate-200 hover:bg-slate-800/80"
+                    }`}
                   >
                     {item.label}
                   </a>
@@ -103,7 +105,7 @@ function Navbar({ activeSection }) {
                   onClick={() => setOpen(false)}
                   className="focus-ring mt-2 inline-flex w-full justify-center rounded-lg bg-gradient-to-r from-cyan-400 to-indigo-500 px-3 py-2 text-sm font-semibold text-slate-950"
                 >
-                  Let&apos;s Connect
+                  {siteConfig.nav.ctaLabel}
                 </a>
               </li>
             </ul>

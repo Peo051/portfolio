@@ -12,6 +12,6 @@ export const socialLinks = [
   {
     id: "linkedin",
     label: "LinkedIn",
-    href: "https://linkedin.com/in/your-linkedin"
+    href: "https://linkedin.com/in/your-linkedin-placeholder"
   }
 ];

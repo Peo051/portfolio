@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowUpRight, Github, Linkedin, Mail, MapPin } from "lucide-react";
 import AxisReveal from "./AxisReveal";
 import { personalInfo, socialLinks } from "../data";
+import profilePhoto from "../assets/profile.jpg";
 
 const chipItems = ["Backend", ".NET", "SQL", "Clean Architecture", "AI Vision"];
 
@@ -13,7 +14,7 @@ const iconMap = {
 
 function HeroSection() {
   return (
-    <section id="top" className="relative flex min-h-[calc(100vh-6.2rem)] items-center pb-10 pt-16 sm:pt-20">
+    <section id="top" className="relative flex min-h-[calc(100vh-6.2rem)] items-center pb-8 pt-14 sm:pt-18">
       <div className="grid w-full gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:items-center">
         <div>
           <AxisReveal axis="y" distance={16} amount={0.5}>
@@ -73,7 +74,7 @@ function HeroSection() {
             <div className="relative mx-auto max-w-sm">
               <div className="profile-frame">
                 <img
-                  src="/assets/profile-placeholder.svg"
+                  src={profilePhoto}
                   alt="Profile of Tran Duong Gia Bao"
                   className="h-[460px] w-full rounded-3xl object-cover object-center"
                   loading="lazy"
@@ -93,6 +94,21 @@ function HeroSection() {
               >
                 Systems Thinking
               </motion.div>
+            </div>
+
+            <div className="mt-5 rounded-2xl border border-line bg-slate-900/70 p-4">
+              <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-sky-300/80">Engineering Snapshot</p>
+              <div className="mt-3 space-y-1.5 font-mono text-xs text-slate-300">
+                <p>
+                  <span className="text-cyan-300">$</span> focus --domain backend-systems
+                </p>
+                <p>
+                  <span className="text-cyan-300">$</span> stack --core .net aspnetcore sqlserver
+                </p>
+                <p>
+                  <span className="text-cyan-300">$</span> learning --track applied-ai vision
+                </p>
+              </div>
             </div>
 
             <div className="mt-5 grid grid-cols-2 gap-2">

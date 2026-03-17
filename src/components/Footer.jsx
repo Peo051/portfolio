@@ -1,17 +1,19 @@
 import { Github, Linkedin, Mail } from "lucide-react";
-import { personalInfo } from "../data";
+import { personalInfo, socialLinks } from "../data";
+
+const socialMap = Object.fromEntries(socialLinks.map((item) => [item.id, item.href]));
 
 function Footer() {
   return (
     <footer className="relative z-10 border-t border-line/70 bg-slate-950/50 py-8">
       <div className="mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-4 px-5 text-sm text-slate-400 sm:flex-row sm:px-8">
         <p>
-          {new Date().getFullYear()} &copy; {personalInfo.displayName}. Built with technical focus.
+          {new Date().getFullYear()} &copy; {personalInfo.displayName}. Engineering-first portfolio.
         </p>
 
         <div className="flex items-center gap-2">
           <a
-            href={personalInfo.github}
+            href={socialMap.github}
             target="_blank"
             rel="noreferrer"
             className="focus-ring rounded-lg border border-line bg-slate-900/70 p-2 text-slate-300 transition hover:border-sky-300/30 hover:text-slate-100"
@@ -20,7 +22,7 @@ function Footer() {
             <Github size={15} />
           </a>
           <a
-            href={personalInfo.linkedin}
+            href={socialMap.linkedin}
             target="_blank"
             rel="noreferrer"
             className="focus-ring rounded-lg border border-line bg-slate-900/70 p-2 text-slate-300 transition hover:border-sky-300/30 hover:text-slate-100"

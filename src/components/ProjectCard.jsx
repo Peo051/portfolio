@@ -28,6 +28,7 @@ function ProjectCard({ project, index }) {
         <div className={reversed ? "order-1 lg:order-2" : "order-1 lg:order-1"}>
           <p className="font-mono text-xs uppercase tracking-[0.14em] text-sky-300/80">{project.category}</p>
           <h3 className="mt-3 text-2xl font-semibold text-slate-100">{project.title}</h3>
+          <p className="mt-3 text-sm text-slate-200">{project.valueSummary}</p>
 
           <div className="mt-4 space-y-4 text-sm leading-relaxed text-slate-300">
             <div>
@@ -53,6 +54,11 @@ function ProjectCard({ project, index }) {
                   </li>
                 ))}
               </ul>
+            </div>
+
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.12em] text-slate-300">What I Learned</p>
+              <p className="mt-1.5">{project.whatILearned}</p>
             </div>
           </div>
 

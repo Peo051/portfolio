@@ -3,18 +3,21 @@ export const personalInfo = {
   displayName: "Gia Bao",
   role: "Software Engineering Student | Backend & AI Enthusiast",
   location: "Ho Chi Minh City, Vietnam",
-  school: "HUIT - Ho Chi Minh City University of Industry and Trade",
+  school: "University of Industry and Trade (HUIT)",
+  major: "Information Technology / Applied Computing",
   email: "tranduonggiabao0501email@gmail.com",
   github: "https://github.com/GiaBao051",
   linkedin: "https://linkedin.com/in/your-linkedin",
-  heroEyebrow: "Backend & AI Enthusiast",
-  headline: "Building reliable software systems with engineering discipline and long-term technical depth.",
+  heroEyebrow: "Software Engineering Student",
+  headline: "Building reliable software systems with strong engineering fundamentals.",
   summary:
-    "I am a software engineering student focused on building structured, maintainable, and scalable software systems. My core direction is backend engineering with object-oriented design, clean architecture, and relational database thinking, while I continue to expand into applied AI and computer vision through practical implementation.",
+    "I focus on backend-oriented software engineering with clean architecture principles, structured business logic, and relational database design. Alongside this foundation, I am expanding into applied AI and computer vision through practical, hands-on experimentation.",
   aboutParagraphs: [
-    "I approach software engineering with a fundamentals-first mindset. Beyond writing code that works, I focus on designing logic that is readable, testable, and maintainable over time.",
-    "My strongest interest is backend system building, especially where business flow, data modeling, and architecture decisions shape product quality. Alongside academic development, I actively strengthen my technical maturity through project delivery and technical competitions."
+    "I am currently studying software engineering at HUIT with a focus on strong technical fundamentals. My learning approach is centered on writing structured, maintainable code and understanding how systems behave beyond the interface layer.",
+    "I am most engaged when building core logic: backend workflows, relational data modeling, and maintainable service architecture. Through academic projects and technical competitions, I continue to expand into applied AI and computer vision with a practical, implementation-driven mindset."
   ],
+  professionalSummary:
+    "I am a software engineering student focused on building reliable, structured, and maintainable software systems. My core interests lie in backend development, object-oriented design, clean architecture, and relational databases. Alongside academic projects, I actively explore applied AI and computer vision through hands-on experimentation and technical competitions.",
   focusAreas: [
     "Backend Development",
     ".NET / ASP.NET Core",
@@ -23,6 +26,7 @@ export const personalInfo = {
     "SQL Server / Relational Database Design",
     "Applied AI / Computer Vision"
   ],
+  currentlyExploring: ["Applied AI", "Computer Vision", "System Design Thinking"],
   currentGoal:
-    "Seeking internship and real-world engineering opportunities to deepen backend architecture and database system design while continuing to grow through impactful projects."
+    "Seeking internship and real-world engineering opportunities where I can deepen backend and system-building skills while continuing to grow through meaningful, hands-on projects."
 };

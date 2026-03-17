@@ -1,7 +1,7 @@
 import SectionHeading from "./SectionHeading";
 import ProjectCard from "./ProjectCard";
 import AxisReveal from "./AxisReveal";
-import { additionalExplorations, projectData } from "../data";
+import { additionalExplorations, projectsData } from "../data";
 
 function ProjectsSection() {
   return (
@@ -13,7 +13,7 @@ function ProjectsSection() {
       />
 
       <div className="space-y-7">
-        {projectData.map((project, index) => (
+        {projectsData.map((project, index) => (
           <ProjectCard key={project.id} project={project} index={index} />
         ))}
       </div>

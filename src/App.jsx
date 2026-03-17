@@ -9,6 +9,7 @@ import ProjectsSection from "./components/ProjectsSection";
 import AchievementsSection from "./components/AchievementsSection";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
+import { siteConfig } from "./data";
 
 const sectionIds = ["about", "journey", "skills", "projects", "achievements", "contact"];
 
@@ -16,7 +17,12 @@ function App() {
   const [activeSection, setActiveSection] = useState("about");
 
   useEffect(() => {
-    document.title = "Tran Duong Gia Bao | Software Engineering Portfolio";
+    document.title = siteConfig.seo.title;
+
+    const descriptionTag = document.querySelector('meta[name="description"]');
+    if (descriptionTag) {
+      descriptionTag.setAttribute("content", siteConfig.seo.description);
+    }
 
     const sections = sectionIds.map((id) => document.getElementById(id)).filter(Boolean);
 

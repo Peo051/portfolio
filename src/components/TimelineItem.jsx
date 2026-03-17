@@ -11,6 +11,16 @@ function TimelineItem({ item, index }) {
       <p className="font-mono text-xs uppercase tracking-[0.14em] text-sky-300/80">{item.stage}</p>
       <h3 className="mt-2 text-lg font-semibold text-slate-100">{item.title}</h3>
       <p className="mt-2 text-sm leading-relaxed text-slate-300">{item.description}</p>
+
+      {item.tags?.length ? (
+        <div className="mt-3 flex flex-wrap gap-2">
+          {item.tags.map((tag) => (
+            <span key={tag} className="rounded-full border border-line bg-slate-900/65 px-2.5 py-1 text-[11px] text-slate-200">
+              {tag}
+            </span>
+          ))}
+        </div>
+      ) : null}
     </AxisReveal>
   );
 }

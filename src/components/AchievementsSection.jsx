@@ -26,7 +26,10 @@ function AchievementsSection() {
                 Achievement
               </p>
               <h3 className="mt-4 text-lg font-semibold text-slate-100">{achievement.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-slate-300">{achievement.description}</p>
+              <p className="mt-3 text-sm leading-relaxed text-slate-300">{achievement.context}</p>
+              <p className="mt-3 rounded-2xl border border-line bg-slate-900/65 px-4 py-3 text-sm leading-relaxed text-slate-200">
+                {achievement.reflection}
+              </p>
             </AxisReveal>
           );
         })}

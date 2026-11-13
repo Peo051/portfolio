@@ -1,0 +1,5 @@
+flowchart LR
+    WEB["Customer Storefront &\nAdmin Branch Portal"] -->|MVC & Web API| CTRL["ASP.NET Controllers\n(Menu, Cart, Orders, BranchManager)"]
+    CTRL --> SVC["Business Policies &\nPayOS QR Payment Service"]
+    SVC --> DB[("SQL Server\nMulti-Branch Catalog & Orders")]
+    TESTS["xUnit/NUnit & SQL\nIntegration Tests"] -.->|Verifies| SVC

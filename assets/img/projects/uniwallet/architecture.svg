@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 560" width="1280" height="560" role="img" aria-label="UniWallet — Multi-Wallet Fintech Core &amp; Security Architecture">
+<defs>
+  <linearGradient id="bg-uniwallet" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#0B132B"/>
+    <stop offset="100%" stop-color="#0F172A"/>
+  </linearGradient>
+  <marker id="arrow-uniwallet" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M 0 1 L 10 5 L 0 9 z" fill="#0EA5E9"/>
+  </marker>
+</defs>
+<rect width="1280" height="560" rx="20" fill="url(#bg-uniwallet)" stroke="#1E3A5F" stroke-width="2"/>
+<pattern id="dots" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#1E293B"/></pattern>
+<rect width="1280" height="560" rx="20" fill="url(#dots)" opacity="0.6"/>
+<circle cx="44" cy="48" r="6" fill="#0D9488"/>
+<text x="64" y="54" fill="#F8FAFC" font-family="Inter, Segoe UI, sans-serif" font-size="22" font-weight="700">UniWallet — Multi-Wallet Fintech Core &amp; Security Architecture</text>
+<text x="64" y="80" fill="#94A3B8" font-family="ui-monospace, Consolas, monospace" font-size="13">PRODUCTION ARCHITECTURE  •  VERIFIED FROM BaoAnh109/UniWallet (PHP 8.3 / LARAVEL 13 / TIDB MYSQL)</text>
+<line x1="36" y1="98" x2="1244" y2="98" stroke="#1E293B" stroke-width="1.5"/>
+<rect x="50" y="126" width="236" height="340" rx="14" fill="#131F38" stroke="#2A3A57" stroke-width="1.6"/>
+<rect x="64" y="140" width="208" height="32" rx="8" fill="#192948"/>
+<text x="72" y="161" fill="#38BDF8" font-family="ui-monospace, Consolas, monospace" font-size="11" font-weight="700">01 // CLIENT &amp; WEB UI</text>
+<rect x="64" y="192" width="208" height="64" rx="10" fill="#0B1222" stroke="#293E5E" stroke-width="1.2"/>
+<rect x="64" y="206" width="4" height="36" rx="2" fill="#0EA5E9"/>
+<text x="76" y="229" fill="#E2E8F0" font-family="Inter, Segoe UI, sans-serif" font-size="11.5" font-weight="600">Blade SSR + Vite Frontend</text>
+<rect x="64" y="276" width="208" height="64" rx="10" fill="#0B1222" stroke="#293E5E" stroke-width="1.2"/>
+<rect x="64" y="290" width="4" height="36" rx="2" fill="#0EA5E9"/>
+<text x="76" y="313" fill="#E2E8F0" font-family="Inter, Segoe UI, sans-serif" font-size="11.5" font-weight="600">Customer Wallet &amp; QR UI</text>
+<rect x="64" y="360" width="208" height="64" rx="10" fill="#0B1222" stroke="#293E5E" stroke-width="1.2"/>
+<rect x="64" y="374" width="4" height="36" rx="2" fill="#0EA5E9"/>
+<text x="76" y="397" fill="#E2E8F0" font-family="Inter, Segoe UI, sans-serif" font-size="11.5" font-weight="600">Admin Monitoring &amp; UniBot</text>
+<line x1="290" y1="296" x2="358" y2="296" stroke="#0EA5E9" stroke-width="2.2" marker-end="url(#arrow-uniwallet)"/>
+<rect x="290.0" y="264" width="68" height="20" rx="6" fill="#0B132B" stroke="#2A4469" stroke-width="1"/>
+<text x="324.0" y="278" text-anchor="middle" fill="#BAE6FD" font-family="ui-monospace, Consolas, monospace" font-size="9">HTTPS / CSRF</text>
+<rect x="364" y="126" width="236" height="340" rx="14" fill="#131F38" stroke="#0EA5E9" stroke-width="1.6"/>
+<rect x="378" y="140" width="208" height="32" rx="8" fill="#192948"/>
+<text x="386" y="161" fill="#38BDF8" font-family="ui-monospace, Consolas, monospace" font-size="11" font-weight="700">02 // SECURITY &amp; AUTH GATE</text>
+<rect x="378" y="192" width="208" height="64" rx="10" fill="#0B1222" stroke="#293E5E" stroke-width="1.2"/>
+<rect x="378" y="206" width="4" height="36" rx="2" fill="#0EA5E9"/>
+<text x="390" y="229" fill="#E2E8F0" font-family="Inter, Segoe UI, sans-serif" font-size="11.5" font-weight="600">Firebase OAuth (Google/GitHub)</text>
+<rect x="378" y="276" width="208" height="64" rx="10" fill="#0B1222" stroke="#293E5E" stroke-width="1.2"/>
+<rect x="378" y="290" width="4" height="36" rx="2" fill="#0EA5E9"/>
+<text x="390" y="313" fill="#E2E8F0" font-family="Inter, Segoe UI, sans-serif" font-size="11.5" font-weight="600">Resend OTP &amp; 30d Trust</text>
+<rect x="378" y="360" width="208" height="64" rx="10" fill="#0B1222" stroke="#293E5E" stroke-width="1.2"/>
+<rect x="378" y="374" width="4" height="36" rx="2" fill="#0EA5E9"/>
+<text x="390" y="397" fill="#E2E8F0" font-family="Inter, Segoe UI, sans-serif" font-size="11.5" font-weight="600">3-Photo KYC &amp; Face &gt;= 10M</text>
+<line x1="604" y1="296" x2="672" y2="296" stroke="#0EA5E9" stroke-width="2.2" marker-end="url(#arrow-uniwallet)"/>
+<rect x="604.0" y="264" width="68" height="20" rx="6" fill="#0B132B" stroke="#2A4469" stroke-width="1"/>
+<text x="638.0" y="278" text-anchor="middle" fill="#BAE6FD" font-family="ui-monospace, Consolas, monospace" font-size="9">Policy Gate</text>
+<rect x="678" y="126" width="236" height="340" rx="14" fill="#131F38" stroke="#0D9488" stroke-width="1.6"/>
+<rect x="692" y="140" width="208" height="32" rx="8" fill="#192948"/>
+<text x="700" y="161" fill="#38BDF8" font-family="ui-monospace, Consolas, monospace" font-size="11" font-weight="700">03 // LARAVEL 13 CORE</text>
+<rect x="692" y="192" width="208" height="64" rx="10" fill="#0B1222" stroke="#293E5E" stroke-width="1.2"/>
+<rect x="692" y="206" width="4" height="36" rx="2" fill="#0D9488"/>
+<text x="704" y="229" fill="#E2E8F0" font-family="Inter, Segoe UI, sans-serif" font-size="11.5" font-weight="600">TransactionOrchestrator</text>
+<rect x="692" y="276" width="208" height="64" rx="10" fill="#0B1222" stroke="#293E5E" stroke-width="1.2"/>
+<rect x="692" y="290" width="4" height="36" rx="2" fill="#0D9488"/>
+<text x="704" y="313" fill="#E2E8F0" font-family="Inter, Segoe UI, sans-serif" font-size="11.5" font-weight="600">Wallet Ledger &amp; Holds</text>
+<rect x="692" y="360" width="208" height="64" rx="10" fill="#0B1222" stroke="#293E5E" stroke-width="1.2"/>
+<rect x="692" y="374" width="4" height="36" rx="2" fill="#0D9488"/>
+<text x="704" y="397" fill="#E2E8F0" font-family="Inter, Segoe UI, sans-serif" font-size="11.5" font-weight="600">MonitoringPrivacyPresenter</text>
+<line x1="918" y1="296" x2="986" y2="296" stroke="#0EA5E9" stroke-width="2.2" marker-end="url(#arrow-uniwallet)"/>
+<rect x="918.0" y="264" width="68" height="20" rx="6" fill="#0B132B" stroke="#2A4469" stroke-width="1"/>
+<text x="952.0" y="278" text-anchor="middle" fill="#BAE6FD" font-family="ui-monospace, Consolas, monospace" font-size="9">Ledger / API</text>
+<rect x="992" y="126" width="236" height="340" rx="14" fill="#131F38" stroke="#2A3A57" stroke-width="1.6"/>
+<rect x="1006" y="140" width="208" height="32" rx="8" fill="#192948"/>
+<text x="1014" y="161" fill="#38BDF8" font-family="ui-monospace, Consolas, monospace" font-size="11" font-weight="700">04 // RAILS &amp; TIDB CLOUD</text>
+<rect x="1006" y="192" width="208" height="64" rx="10" fill="#0B1222" stroke="#293E5E" stroke-width="1.2"/>
+<rect x="1006" y="206" width="4" height="36" rx="2" fill="#0D9488"/>
+<text x="1018" y="229" fill="#E2E8F0" font-family="Inter, Segoe UI, sans-serif" font-size="11.5" font-weight="600">VietQR, SePay, MoMo &amp; Banks</text>
+<rect x="1006" y="276" width="208" height="64" rx="10" fill="#0B1222" stroke="#293E5E" stroke-width="1.2"/>
+<rect x="1006" y="290" width="4" height="36" rx="2" fill="#0D9488"/>
+<text x="1018" y="313" fill="#E2E8F0" font-family="Inter, Segoe UI, sans-serif" font-size="11.5" font-weight="600">HMAC-SHA256 Webhooks</text>
+<rect x="1006" y="360" width="208" height="64" rx="10" fill="#0B1222" stroke="#293E5E" stroke-width="1.2"/>
+<rect x="1006" y="374" width="4" height="36" rx="2" fill="#0D9488"/>
+<text x="1018" y="397" fill="#E2E8F0" font-family="Inter, Segoe UI, sans-serif" font-size="11.5" font-weight="600">TiDB MySQL (54 Migrations)</text>
+<text x="64" y="520" fill="#64748B" font-family="ui-monospace, Consolas, monospace" font-size="12">Production Deployment: https://uniwallet.site/ (Render Singapore)  •  Mermaid source available (.mmd)</text>
+</svg>

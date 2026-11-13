@@ -1,0 +1,4 @@
+flowchart LR
+    VIEW["MainWindow.xaml\n(Keypad, Display, History Drawer)"] <-->|Two-Way Binding| VM["CalculatorViewModel\n& RelayCommand"]
+    VM --> SVC["CalculatorService\n(Expression Evaluation Engine)"]
+    VM --> MODEL["HistoryItem Collection\n(.NET 8 Desktop)"]

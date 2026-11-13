@@ -1,0 +1,5 @@
+flowchart LR
+    ZALO["Zalo Super App &\nOfficial Account OA"] --> UI["React + TypeScript SPA\n(Home, Flash Sale, Catalog, Cart)"]
+    SCRIPTS["Node Build Scripts\n(Sync & Image Optimizer)"] --> DATA["Validated Product JSON\n& WebP Asset Bundle"]
+    DATA --> UI
+    UI --> STORE[("Client State &\nZalo Order/OA Flow")]

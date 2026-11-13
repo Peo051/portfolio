@@ -1,26 +1,31 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="vi" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Portfolio of Trần Dương Gia Bảo — Backend / Fullstack Developer Intern focusing on .NET, ASP.NET Core, SQL Server and practical software projects.">
+  <meta name="description" content="Portfolio of Trần Dương Gia Bảo — Third-year IT student at HUIT (GPA 3.74/4.00), Frontend Developer Intern at Deep Pro Technology Group, focusing on React/TypeScript, C#/.NET, ASP.NET Core Web API, and SQL Server.">
   <meta name="author" content="Trần Dương Gia Bảo">
-  <meta name="theme-color" content="#0a0e13">
-  <title>Trần Dương Gia Bảo | Backend / Fullstack Developer</title>
+  <meta name="theme-color" content="#090d14">
+  <title>Trần Dương Gia Bảo | Software Engineering Portfolio</title>
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=2.7">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+  <link rel="stylesheet" href="assets/css/tokens.css?v=4.0">
+  <link rel="stylesheet" href="assets/css/base.css?v=4.0">
+  <link rel="stylesheet" href="assets/css/components.css?v=4.0">
+  <link rel="stylesheet" href="assets/css/pages.css?v=4.0">
 </head>
 <body>
-  <div class="ambient ambient-one" aria-hidden="true"></div>
-  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <a class="skip-link" href="#app">Skip to main content</a>
+  <div id="scrollProgressBar" class="scroll-progress-bar" aria-hidden="true"></div>
+  <div class="ambient-grid-bg" aria-hidden="true"></div>
 
   <header class="site-header" id="siteHeader">
     <div class="header-inner shell">
       <a class="brand" href="#/" aria-label="Trần Dương Gia Bảo — Home">
-        <img class="brand-avatar" src="assets/img/profile/avatar-main.png?v=2.7" alt="Gia Bảo Avatar">
+        <img class="brand-avatar" src="assets/img/profile/avatar-main.png?v=2.7" alt="Trần Dương Gia Bảo">
         <span class="brand-copy">
           <strong>GIA BAO</strong>
           <small>SOFTWARE ENGINEERING</small>
@@ -31,15 +36,16 @@
         <a data-route="/" href="#/">Home</a>
         <a data-route="/project" href="#/project">Projects</a>
         <a data-route="/skill" href="#/skill">Skills</a>
-        <a data-route="/education" href="#/education">Education</a>
+        <a data-route="/certifications" href="#/certifications">Certifications</a>
         <a data-route="/achievement" href="#/achievement">Achievements</a>
         <a data-route="/resume" href="#/resume">Resume</a>
+        <a data-route="/contact" href="#/contact">Contact</a>
       </nav>
 
       <div class="header-actions">
-        <button class="utility-button language-toggle" id="languageToggle" type="button" aria-label="Change language">VI</button>
+        <button class="utility-button language-toggle" id="languageToggle" type="button" aria-label="Change language">EN</button>
         <button class="utility-button theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme">
-          <span class="theme-icon" aria-hidden="true">◐</span>
+          <span aria-hidden="true">&#9680;</span>
         </button>
         <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="mobileNav" aria-label="Open navigation">
           <span></span><span></span>
@@ -51,10 +57,10 @@
       <a data-route="/" href="#/">Home</a>
       <a data-route="/project" href="#/project">Projects</a>
       <a data-route="/skill" href="#/skill">Skills</a>
-      <a data-route="/education" href="#/education">Education</a>
+      <a data-route="/certifications" href="#/certifications">Certifications</a>
       <a data-route="/achievement" href="#/achievement">Achievements</a>
       <a data-route="/resume" href="#/resume">Resume</a>
-      <a href="#/contact">Contact</a>
+      <a data-route="/contact" href="#/contact">Contact</a>
     </nav>
   </header>
 
@@ -67,15 +73,18 @@
         <p class="footer-copy" data-i18n="footerLine">Backend / Fullstack Developer Intern</p>
       </div>
       <div class="footer-links">
+        <a href="assets/documents/TranDuongGiaBao_ITIntern_CV.pdf" download="TranDuongGiaBao_ITIntern_CV.pdf" data-i18n="footerCv">Download CV (PDF)</a>
+        <a href="#/education" data-i18n="footerEdu">Education</a>
+        <a href="#/certifications">Certifications</a>
         <a href="mailto:tranduonggiabao0501@gmail.com">Email</a>
         <a href="https://github.com/Peo051" target="_blank" rel="noreferrer">GitHub</a>
         <a href="https://www.linkedin.com/in/peo0501" target="_blank" rel="noreferrer">LinkedIn</a>
       </div>
-      <p class="footer-meta">© <span id="currentYear"></span> Gia Bao. Built with HTML, CSS & JavaScript.</p>
+      <p class="footer-meta">&copy; <span id="currentYear"></span> Trần Dương Gia Bảo.</p>
     </div>
   </footer>
 
-  <div class="lightbox-modal" id="lightboxModal" aria-hidden="true" role="dialog" aria-modal="true">
+  <div class="lightbox-modal" id="lightboxModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="lightboxTitle">
     <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
     <div class="lightbox-dialog">
       <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close dialog">&times;</button>
@@ -91,6 +100,6 @@
     </div>
   </div>
 
-  <script src="assets/js/main.js?v=2.7" defer></script>
+  <script type="module" src="assets/js/app.js?v=4.0"></script>
 </body>
 </html>

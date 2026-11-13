@@ -1,0 +1,5 @@
+flowchart LR
+    WPF["WPF Desktop UI\n(POS, Recipe, Inventory, Reports)"] --> SVC["Service Layer Interfaces\n(HoaDonBan, Kho, PhaChe, Auth)"]
+    SVC --> EF["CoffeeShop.EFModel\n(Entities & DbContext)"]
+    EF --> SQL[("SQL Server Database\n& Stored Views")]
+    SVC --> RPT["CoffeeShop.CrystalReports.Wpf\n& VietQR Export"]

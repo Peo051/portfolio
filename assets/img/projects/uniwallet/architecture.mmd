@@ -1,0 +1,7 @@
+flowchart LR
+    CLIENT["Blade SSR + Vite UI\n(Customer Wallets, QR Checkout, Admin Portal)"] -->|Auth & Session| SEC["Security & Step-Up Gate\n(Firebase Auth, Resend OTP/MFA, 3-Image KYC, Face >= 10M VND)"]
+    SEC -->|Authorized Request| CORE["Laravel 13 Financial Core\n(TransactionOrchestrator, StateMachine, MonitoringPrivacyPresenter)"]
+    CORE -->|Ledger & Locks| DB[("TiDB Cloud MySQL\n54 Migrations, DB Cache & Queue")]
+    CORE -->|Payment Rails| RAILS["External Gateways & Banking\n(VietQR, SePay, MoMo, Bank Payout)"]
+    RAILS -->|HMAC-SHA256 + Nonce| WH["Webhook & Sanitizer\n(ProviderWebhookController, SePayWebhookController)"]
+    WH --> CORE

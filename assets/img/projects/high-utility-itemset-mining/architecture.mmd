@@ -1,0 +1,5 @@
+flowchart LR
+    INPUT["Transactions +\nTaxonomy Tree (taxonomy.txt)"] --> BUILD["Utility-List & TWU/EUCS\nData Structures"]
+    BUILD --> CORE["Mining Kernels\n(HUIMiner & AlgoCLHMiner)"]
+    CORE --> PRUNE["Upper-Bound Pruning &\nCross-Level Aggregation"]
+    CORE --> OUT[("Discovered HUIs &\nMemoryLogger Metrics")]

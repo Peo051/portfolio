@@ -1,0 +1,5 @@
+flowchart LR
+    UI["Next.js Web App\n(Editor, Tutor, Progress, Privacy)"] -->|REST JSON| API["FastAPI Gateway\n(Auth, Sessions, Mastery Routes)"]
+    API --> ENG["Socratic Tutor Engine\n(Diagnosis, Hint Manager, Leakage Guard)"]
+    ENG -->|Grounded Prompt| LLM["LLM Provider &\nVerification Validator"]
+    API -->|Persist| DB[("Database\nMastery & History")]

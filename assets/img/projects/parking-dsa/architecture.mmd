@@ -1,0 +1,4 @@
+flowchart LR
+    UI["Console Interface\n(DuongBao.h & Menu Loop)"] --> OPS["Parking Operations\n(Ham.h: Check-in/Out, Search, Audit)"]
+    OPS <--> DS["In-Memory C++ Structs\n(struct.h: Vehicles & Staff)"]
+    DS <--> FILES[("Text Persistence\nxeVaoBai.txt, dsNhanVien.txt, Logs")]

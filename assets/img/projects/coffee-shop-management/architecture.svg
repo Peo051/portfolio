@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 560" width="1280" height="560" role="img" aria-label="Coffee Shop WPF — N-Tier POS, Inventory &amp; Reporting Architecture">
+<defs>
+  <linearGradient id="bg-coffee-shop-management" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#0B1120"/>
+    <stop offset="100%" stop-color="#11192C"/>
+  </linearGradient>
+  <marker id="arrow-coffee-shop-management" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M 0 1 L 10 5 L 0 9 z" fill="#9A3412"/>
+  </marker>
+</defs>
+<rect width="1280" height="560" rx="20" fill="url(#bg-coffee-shop-management)" stroke="#24324D" stroke-width="2"/>
+<pattern id="dots" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#1E293B"/></pattern>
+<rect width="1280" height="560" rx="20" fill="url(#dots)" opacity="0.55"/>
+<circle cx="44" cy="48" r="6" fill="#9A3412"/>
+<text x="64" y="54" fill="#F8FAFC" font-family="Inter, Segoe UI, sans-serif" font-size="22" font-weight="700">Coffee Shop WPF — N-Tier POS, Inventory &amp; Reporting Architecture</text>
+<text x="64" y="80" fill="#94A3B8" font-family="ui-monospace, Consolas, monospace" font-size="13">SYSTEM ARCHITECTURE DATAFLOW  •  VERIFIED FROM REPOSITORY SOURCE TREE</text>
+<line x1="36" y1="98" x2="1244" y2="98" stroke="#1E293B" stroke-width="1.5"/>
+<rect x="48" y="126" width="248" height="340" rx="14" fill="#141E33" stroke="#2A3A57" stroke-width="1.6"/>
+<rect x="62" y="140" width="220" height="32" rx="8" fill="#1B2844"/>
+<text x="70" y="161" fill="#9A3412" font-family="ui-monospace, Consolas, monospace" font-size="11" font-weight="700">01 // WPF PRESENTATION</text>
+<rect x="62" y="192" width="220" height="64" rx="10" fill="#0D1526" stroke="#2D3F5E" stroke-width="1.2"/>
+<rect x="62" y="206" width="4" height="36" rx="2" fill="#9A3412"/>
+<text x="74" y="229" fill="#E2E8F0" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600">POS &amp; Table Area Views</text>
+<rect x="62" y="276" width="220" height="64" rx="10" fill="#0D1526" stroke="#2D3F5E" stroke-width="1.2"/>
+<rect x="62" y="290" width="4" height="36" rx="2" fill="#9A3412"/>
+<text x="74" y="313" fill="#E2E8F0" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600">Custom Converters &amp; Styles</text>
+<rect x="62" y="360" width="220" height="64" rx="10" fill="#0D1526" stroke="#2D3F5E" stroke-width="1.2"/>
+<rect x="62" y="374" width="4" height="36" rx="2" fill="#9A3412"/>
+<text x="74" y="397" fill="#E2E8F0" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600">Crystal Reports Viewer</text>
+<line x1="300" y1="296" x2="354" y2="296" stroke="#9A3412" stroke-width="2.2" marker-end="url(#arrow-coffee-shop-management)"/>
+<rect x="298.0" y="266" width="58" height="20" rx="6" fill="#0B1120" stroke="#2A3A57" stroke-width="1"/>
+<text x="327.0" y="280" text-anchor="middle" fill="#CBD5E1" font-family="ui-monospace, Consolas, monospace" font-size="9">DataBind</text>
+<rect x="360" y="126" width="248" height="340" rx="14" fill="#141E33" stroke="#9A3412" stroke-width="1.6"/>
+<rect x="374" y="140" width="220" height="32" rx="8" fill="#1B2844"/>
+<text x="382" y="161" fill="#9A3412" font-family="ui-monospace, Consolas, monospace" font-size="11" font-weight="700">02 // SERVICE LAYER</text>
+<rect x="374" y="192" width="220" height="64" rx="10" fill="#0D1526" stroke="#2D3F5E" stroke-width="1.2"/>
+<rect x="374" y="206" width="4" height="36" rx="2" fill="#9A3412"/>
+<text x="386" y="229" fill="#E2E8F0" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600">Order, Recipe &amp; Prep Svc</text>
+<rect x="374" y="276" width="220" height="64" rx="10" fill="#0D1526" stroke="#2D3F5E" stroke-width="1.2"/>
+<rect x="374" y="290" width="4" height="36" rx="2" fill="#9A3412"/>
+<text x="386" y="313" fill="#E2E8F0" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600">Inventory &amp; Audit Log Svc</text>
+<rect x="374" y="360" width="220" height="64" rx="10" fill="#0D1526" stroke="#2D3F5E" stroke-width="1.2"/>
+<rect x="374" y="374" width="4" height="36" rx="2" fill="#9A3412"/>
+<text x="386" y="397" fill="#E2E8F0" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600">Auth &amp; Role Security Svc</text>
+<line x1="612" y1="296" x2="666" y2="296" stroke="#9A3412" stroke-width="2.2" marker-end="url(#arrow-coffee-shop-management)"/>
+<rect x="610.0" y="266" width="58" height="20" rx="6" fill="#0B1120" stroke="#2A3A57" stroke-width="1"/>
+<text x="639.0" y="280" text-anchor="middle" fill="#CBD5E1" font-family="ui-monospace, Consolas, monospace" font-size="9">Service I/F</text>
+<rect x="672" y="126" width="248" height="340" rx="14" fill="#141E33" stroke="#2A3A57" stroke-width="1.6"/>
+<rect x="686" y="140" width="220" height="32" rx="8" fill="#1B2844"/>
+<text x="694" y="161" fill="#9A3412" font-family="ui-monospace, Consolas, monospace" font-size="11" font-weight="700">03 // EF DATA ACCESS</text>
+<rect x="686" y="192" width="220" height="64" rx="10" fill="#0D1526" stroke="#2D3F5E" stroke-width="1.2"/>
+<rect x="686" y="206" width="4" height="36" rx="2" fill="#9A3412"/>
+<text x="698" y="229" fill="#E2E8F0" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600">DbContext &amp; DbConnection</text>
+<rect x="686" y="276" width="220" height="64" rx="10" fill="#0D1526" stroke="#2D3F5E" stroke-width="1.2"/>
+<rect x="686" y="290" width="4" height="36" rx="2" fill="#9A3412"/>
+<text x="698" y="313" fill="#E2E8F0" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600">HoaDon, Ban, NguyenLieu</text>
+<rect x="686" y="360" width="220" height="64" rx="10" fill="#0D1526" stroke="#2D3F5E" stroke-width="1.2"/>
+<rect x="686" y="374" width="4" height="36" rx="2" fill="#9A3412"/>
+<text x="698" y="397" fill="#E2E8F0" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600">CongThucMon &amp; AuditLog</text>
+<line x1="924" y1="296" x2="978" y2="296" stroke="#9A3412" stroke-width="2.2" marker-end="url(#arrow-coffee-shop-management)"/>
+<rect x="922.0" y="266" width="58" height="20" rx="6" fill="#0B1120" stroke="#2A3A57" stroke-width="1"/>
+<text x="951.0" y="280" text-anchor="middle" fill="#CBD5E1" font-family="ui-monospace, Consolas, monospace" font-size="9">EF Query</text>
+<rect x="984" y="126" width="248" height="340" rx="14" fill="#141E33" stroke="#2A3A57" stroke-width="1.6"/>
+<rect x="998" y="140" width="220" height="32" rx="8" fill="#1B2844"/>
+<text x="1006" y="161" fill="#9A3412" font-family="ui-monospace, Consolas, monospace" font-size="11" font-weight="700">04 // SQL &amp; OUTPUTS</text>
+<rect x="998" y="192" width="220" height="64" rx="10" fill="#0D1526" stroke="#2D3F5E" stroke-width="1.2"/>
+<rect x="998" y="206" width="4" height="36" rx="2" fill="#9A3412"/>
+<text x="1010" y="229" fill="#E2E8F0" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600">SQL Server RDBMS</text>
+<rect x="998" y="276" width="220" height="64" rx="10" fill="#0D1526" stroke="#2D3F5E" stroke-width="1.2"/>
+<rect x="998" y="290" width="4" height="36" rx="2" fill="#9A3412"/>
+<text x="1010" y="313" fill="#E2E8F0" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600">VietQR Payment Slip</text>
+<rect x="998" y="360" width="220" height="64" rx="10" fill="#0D1526" stroke="#2D3F5E" stroke-width="1.2"/>
+<rect x="998" y="374" width="4" height="36" rx="2" fill="#9A3412"/>
+<text x="1010" y="397" fill="#E2E8F0" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600">Crystal Daily Revenue RPT</text>
+<text x="64" y="520" fill="#64748B" font-family="ui-monospace, Consolas, monospace" font-size="12">Peo051 Engineering Portfolio  •  Mermaid source available in repository assets/img/projects</text>
+</svg>

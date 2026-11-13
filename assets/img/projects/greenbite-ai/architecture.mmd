@@ -1,0 +1,5 @@
+flowchart LR
+    FE["React + Vite Frontend\n(Student Rescue & Seller Views)"] -->|JSON API| MW["Express Middlewares\n(Auth, Role, Zod Validation)"]
+    MW --> MOD["Domain Modules\n(RescueItems, Orders, Impact, Admin)"]
+    MW --> AI["Gemini AI Service\n(Dynamic End-of-Day Pricing)"]
+    MOD --> DB[("PostgreSQL via Prisma ORM")]

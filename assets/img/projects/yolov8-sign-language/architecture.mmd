@@ -1,0 +1,6 @@
+flowchart LR
+    DATA["Sign Language Digits Dataset\n(Classes 0-9) & Fix Scripts"] --> TRAIN["YOLOv8n-cls Trainer\n(train_model.py / Colab GPU)"]
+    TRAIN --> WEIGHTS["Trained Weights (best.pt)"]
+    CAM["OpenCV Webcam Stream"] --> INF["Real-Time Inference\n(webcam_digits.py)"]
+    WEIGHTS --> INF
+    INF --> HUD["HUD Overlay (Digit & Confidence)"]

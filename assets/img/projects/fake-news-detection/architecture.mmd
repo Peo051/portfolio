@@ -1,0 +1,6 @@
+flowchart LR
+    IN["Flask Web UI (app.py)\nVietnamese Article Input"] --> PREP["Preprocessing\n(stopwords_vi & Tokenizer)"]
+    PREP --> ML["Hybrid Classifier\n(PhoBERT-v2 + TF-IDF Baseline)"]
+    PREP --> RAG["Evidence Verifier\n(query_builder, retriever, api_cache)"]
+    ML --> RES["Verdict & Evidence Panel\n(97.69% Val / 79.85% Test)"]
+    RAG --> RES

@@ -25,8 +25,6 @@ const state = {
   lang: localStorage.getItem("portfolio-language") || "vi",
   certFilter: "all",
   certSearch: "",
-  projectFilter: "all",
-  projectSearch: "",
   skillFilter: "all",
   archTab: "backend"
 };
@@ -182,22 +180,6 @@ function attachPageHandlers() {
     });
   }
 
-  app.querySelectorAll("[data-project-filter]").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      state.projectFilter = btn.dataset.projectFilter;
-      render({ preserveScroll: true });
-    });
-  });
-
-  const projectSearchInput = document.getElementById("projectSearchInput");
-  if (projectSearchInput) {
-    projectSearchInput.addEventListener("input", (e) => {
-      state.projectSearch = e.target.value;
-      const pos = e.target.selectionStart ?? state.projectSearch.length;
-      render({ preserveScroll: true, focusInputId: "projectSearchInput", focusSearchPos: pos });
-    });
-  }
-
   app.querySelectorAll("[data-arch-tab]").forEach((btn) => {
     btn.addEventListener("click", () => {
       state.archTab = btn.dataset.archTab;
@@ -303,7 +285,7 @@ function buildRouteHtml(route) {
   const t = getText();
   if (route === "/") return renderHome(state.lang, t, state);
   if (route === "/skill" || route === "/skills") return renderSkills(state.lang, t, state);
-  if (route === "/project" || route === "/projects") return renderProjects(state.lang, t, state);
+  if (route === "/project" || route === "/projects") return renderProjects(state.lang, t);
   if (route === "/certifications" || route === "/certification" || route === "/certificates") {
     return renderCertifications(state.lang, t, state);
   }

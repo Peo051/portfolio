@@ -23,77 +23,18 @@ function provenanceBadge(type, pText) {
   return { cls: "illustration", label: pText.badgeIllustration };
 }
 
-function matchesProjectFilter(project, filter, query, lang) {
-  if (filter === "featured" && !project.featured) return false;
-  if (filter !== "all" && filter !== "featured") {
-    if (!Array.isArray(project.categories) || !project.categories.includes(filter)) {
-      return false;
-    }
-  }
-  if (!query) return true;
-  const copy = project[lang];
-  const haystack = [
-    project.title,
-    project.category,
-    copy.summary,
-    project.role,
-    ...(project.tech || []),
-    ...(project.categories || [])
-  ]
-    .join(" ")
-    .toLowerCase();
-  return haystack.includes(query);
-}
-
-export function renderProjects(lang, t, state = { projectFilter: "all", projectSearch: "" }) {
+export function renderProjects(lang, t) {
   const pText = t.projectsPage;
   const c = t.common;
-  const filter = state.projectFilter || "all";
-  const search = state.projectSearch || "";
-  const query = search.trim().toLowerCase();
 
   const featuredList = projects.filter((p) => p.featured);
-  const filteredList = projects.filter((p) => matchesProjectFilter(p, filter, query, lang));
-  const liveCount = projects.filter((p) => Boolean(p.live)).length;
-
-  const filterOptions = [
-    ["all", pText.filterAll],
-    ["featured", pText.filterFeatured],
-    ["fullstack", pText.filterFullstack],
-    ["desktop", pText.filterDesktop],
-    ["ai", pText.filterAi],
-    ["research", pText.filterResearch],
-    ["academic", pText.filterAcademic]
-  ];
+  const otherList = projects.filter((p) => !p.featured);
 
   return `
     <div class="page route-enter">
       ${pageHero(t.pages.projects)}
 
       <section class="section" style="padding-top: 0;">
-        <div class="shell">
-          <div class="cert-stats-grid">
-            <div class="cert-stat-card">
-              <span class="cert-stat-value" data-counter-target="${projects.length}" data-counter-decimals="0">${projects.length}</span>
-              <span class="cert-stat-label">${escapeHtml(pText.statTotal)}</span>
-            </div>
-            <div class="cert-stat-card">
-              <span class="cert-stat-value" data-counter-target="${featuredList.length}" data-counter-decimals="0">${featuredList.length}</span>
-              <span class="cert-stat-label">${escapeHtml(pText.statFeatured)}</span>
-            </div>
-            <div class="cert-stat-card">
-              <span class="cert-stat-value" data-counter-target="${liveCount}" data-counter-decimals="0">${liveCount}</span>
-              <span class="cert-stat-label">${escapeHtml(pText.statLive)}</span>
-            </div>
-            <div class="cert-stat-card">
-              <span class="cert-stat-value" data-counter-target="5" data-counter-decimals="0">5</span>
-              <span class="cert-stat-label">${escapeHtml(pText.statDomains)}</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-divider">
         <div class="shell">
           <div class="section-head split">
             <div>
@@ -112,54 +53,14 @@ export function renderProjects(lang, t, state = { projectFilter: "all", projectS
         <div class="shell">
           <div class="section-head split">
             <div>
-              <p class="eyebrow">${escapeHtml(pText.explorerEyebrow)}</p>
-              <h2 class="section-title">${escapeHtml(pText.explorerTitle)}</h2>
+              <p class="eyebrow">${escapeHtml(pText.otherEyebrow)}</p>
+              <h2 class="section-title">${escapeHtml(pText.otherTitle)}</h2>
             </div>
-            <p class="section-intro">${escapeHtml(pText.explorerDesc)}</p>
+            <p class="section-intro">${escapeHtml(pText.otherDesc)}</p>
           </div>
-
-          <div class="cert-toolbar">
-            <div class="cert-search-wrap">
-              <span class="cert-search-icon" aria-hidden="true">${icon("search")}</span>
-              <label class="sr-only" for="projectSearchInput">${escapeHtml(pText.searchPlaceholder)}</label>
-              <input
-                type="search"
-                id="projectSearchInput"
-                class="cert-search-input"
-                value="${escapeHtml(search)}"
-                placeholder="${escapeHtml(pText.searchPlaceholder)}"
-                autocomplete="off"
-              >
-            </div>
-            <div class="cert-filter-group" role="tablist" aria-label="Filter projects by domain">
-              ${filterOptions
-                .map(
-                  ([key, label]) => `
-                <button
-                  type="button"
-                  class="cert-filter-btn ${filter === key ? "is-active" : ""}"
-                  data-project-filter="${escapeHtml(key)}"
-                  aria-pressed="${filter === key ? "true" : "false"}"
-                >${escapeHtml(label)}</button>`
-                )
-                .join("")}
-            </div>
+          <div class="projects-grid">
+            ${otherList.map((p) => renderProjectCard(p, lang, c, pText)).join("")}
           </div>
-
-          <p class="cert-results-meta">
-            ${escapeHtml(pText.showingLabel)} <strong>${filteredList.length}</strong> ${escapeHtml(pText.ofLabel)} <strong>${projects.length}</strong> ${escapeHtml(pText.projectsLabel)}
-          </p>
-
-          ${
-            filteredList.length > 0
-              ? `<div class="projects-grid">
-                  ${filteredList.map((p) => renderProjectCard(p, lang, c, pText)).join("")}
-                </div>`
-              : `<div class="card empty-state">
-                  <h3>${escapeHtml(pText.emptyTitle)}</h3>
-                  <p>${escapeHtml(pText.emptyDesc)}</p>
-                </div>`
-          }
         </div>
       </section>
     </div>`;

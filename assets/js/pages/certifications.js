@@ -18,12 +18,6 @@ export function renderCertifications(lang, t, state) {
   const filter = state.certFilter || "all";
   const query = state.certSearch || "";
 
-  const googleProgramsCount = certifications.filter((item) => item.issuer === "Google via Coursera").length;
-  const otherCount = certifications.length - googleProgramsCount;
-  const verifiedCount =
-    certifications.filter((item) => Boolean(item.verify)).length +
-    allCourseraCourses.filter((item) => Boolean(item.verify)).length;
-
   const isStandaloneView = filter === "standalone";
 
   const filteredItems = isStandaloneView
@@ -48,27 +42,8 @@ export function renderCertifications(lang, t, state) {
   return `
     <div class="page route-enter">
       ${pageHero(t.pages.certifications)}
-      <section class="section">
+      <section class="section" style="padding-top: 0;">
         <div class="shell">
-          <div class="cert-stats-grid">
-            <div class="cert-stat-card">
-              <span class="cert-stat-value">${googleProgramsCount}</span>
-              <span class="cert-stat-label">${escapeHtml(ct.statPrograms)}</span>
-            </div>
-            <div class="cert-stat-card">
-              <span class="cert-stat-value">${allCourseraCourses.length}</span>
-              <span class="cert-stat-label">${escapeHtml(ct.statCourses)}</span>
-            </div>
-            <div class="cert-stat-card">
-              <span class="cert-stat-value">${otherCount}</span>
-              <span class="cert-stat-label">${escapeHtml(ct.statOther)}</span>
-            </div>
-            <div class="cert-stat-card">
-              <span class="cert-stat-value">${verifiedCount}</span>
-              <span class="cert-stat-label">${escapeHtml(ct.statVerified)}</span>
-            </div>
-          </div>
-
           <div class="cert-toolbar">
             <div class="cert-search-wrap">
               <span class="cert-search-icon" aria-hidden="true">${icon("search")}</span>

@@ -106,17 +106,35 @@ export const projects = [
     categories: ["fullstack"],
     category: "ASP.NET MVC + Web API · Multi-Branch E-Commerce",
     year: "2025 — 2026",
-    status: "Completed",
-    statusKey: "completed",
+    status: "Deployed",
+    statusKey: "deployed",
     role: "Fullstack .NET Web Developer",
     repo: "https://github.com/Peo051/Tram25H",
     repoSecondary: "https://github.com/Peo051/Coffee_Shop_Management_Web",
     isPrivateRepo: true,
-    live: "",
+    live: "https://giborcoffee.vercel.app/",
     tech: ["C#", "ASP.NET MVC", "ASP.NET Web API", "SQL Server", "JavaScript", "Bootstrap", "Firebase Auth", "Vercel Serverless", "PayOS"],
     gallery: [
       {
         src: "assets/img/projects/tram25h-coffee/screen-01.webp",
+        type: "real-screenshot",
+        title: { en: "Live Production Storefront — Hero, Admin Link, Cart & Promo Banner", vi: "Giao diện Storefront Live — Hero, Quản trị, Giỏ hàng & Banner Ưu đãi" },
+        caption: {
+          en: "Live deployment capture of the companion GIBOR COFFEE ordering storefront at https://giborcoffee.vercel.app/ featuring dark theme navigation, active cart badge, Admin shortcut, and promotional banner.",
+          vi: "Ảnh chụp thực tế website đặt món trực tuyến tại https://giborcoffee.vercel.app/ (GIBOR COFFEE) với thanh điều hướng dark mode, giỏ hàng trực tiếp, lối vào Quản trị và banner khuyến mãi."
+        }
+      },
+      {
+        src: "assets/img/projects/tram25h-coffee/screen-02.webp",
+        type: "real-screenshot",
+        title: { en: "Live Menu Catalog — Categorized Beverages & Branch Pricing", vi: "Thực đơn Trực tuyến — Phân loại Đồ uống & Giá bán Live" },
+        caption: {
+          en: "Captured live from https://giborcoffee.vercel.app/menu.html (1440×900) showing categorized beverage grids (Coffee, Matcha, Tea) with responsive product cards.",
+          vi: "Chụp trực tiếp từ https://giborcoffee.vercel.app/menu.html (1440×900) hiển thị danh mục Cà phê, Matcha, Trà cùng thẻ món uống và giá bán trực quan."
+        }
+      },
+      {
+        src: "assets/img/projects/tram25h-coffee/screen-03.webp",
         type: "technical-illustration",
         title: { en: "Customer Storefront, Multi-Branch Menu & PayOS Policy Architecture", vi: "Luồng Đặt hàng Chi nhánh & Chính sách Thanh toán PayOS" },
         caption: {
@@ -125,7 +143,7 @@ export const projects = [
         }
       },
       {
-        src: "assets/img/projects/tram25h-coffee/screen-02.webp",
+        src: "assets/img/projects/tram25h-coffee/screen-04.webp",
         type: "technical-illustration",
         title: { en: "Admin & BranchManager Console + Web API Surface", vi: "Khu vực Quản trị Đa chi nhánh & REST Web API" },
         caption: {
@@ -135,50 +153,50 @@ export const projects = [
       }
     ],
     en: {
-      summary: "Full-featured ASP.NET MVC multi-branch coffee e-commerce platform and Web API for Trạm 25H, paired with the responsive Coffee Shop Ordering Website featuring Firebase Auth, checkout discounts, and PayOS QR flows.",
-      overview: "Unifies the Trạm 25H ASP.NET MVC backend (Peo051/Tram25H) with its companion 2025 Coffee Shop Ordering Website (Peo051/Coffee_Shop_Management_Web). Customers browse branch-specific menus, manage carts and loyalty points with localStorage/Firebase Auth, and complete COD or QR checkout backed by PayOS endpoints.",
+      summary: "Full-featured ASP.NET MVC multi-branch coffee e-commerce platform and Web API for Trạm 25H, paired with the live GIBOR COFFEE ordering storefront on Vercel (giborcoffee.vercel.app) featuring Firebase Auth, checkout discounts, and PayOS QR flows.",
+      overview: "Unifies the Trạm 25H ASP.NET MVC backend (Peo051/Tram25H) with its companion 2025 Coffee Shop Ordering Website (Peo051/Coffee_Shop_Management_Web), deployed live as GIBOR COFFEE at https://giborcoffee.vercel.app/. Customers browse branch-specific menus, manage carts and loyalty points with localStorage/Firebase Auth, and complete COD or QR checkout backed by PayOS endpoints.",
       problem: "Operating multiple cafe branches requires strict per-branch cart consistency, reliable online QR payment reconciliation, and role separation between system admins and individual branch managers.",
-      solution: "Structured clean MVC controllers (Home, Menu, Branches, Cart, Account, Contact), a REST Web API (/api/products), dedicated Areas/Admin controllers backed by Tram25H.Tests & SqlIntegrationTests, plus the static/Vercel Ordering Website with client-side checkout logic and serverless PayOS endpoints.",
+      solution: "Structured clean MVC controllers (Home, Menu, Branches, Cart, Account, Contact), a REST Web API (/api/products), dedicated Areas/Admin controllers backed by Tram25H.Tests & SqlIntegrationTests, plus the live Vercel Ordering Website (giborcoffee.vercel.app) with client-side checkout logic and serverless PayOS endpoints.",
       features: [
         "Customer catalog browsing by branch, configurable cart pricing, loyalty-point redemption, order totals/discounts, COD and PayOS QR checkout.",
         "Role-based Admin & BranchManager portal covering branches, categories, products, customers, orders, status, and revenue reports.",
-        "Client-side data persistence (localStorage), Firebase Authentication, mobile-responsive Bootstrap layouts, and Vercel Serverless PayOS endpoints (2025 web baseline).",
+        "Live Vercel storefront (giborcoffee.vercel.app) with client-side data persistence (localStorage), Firebase Authentication, responsive multi-theme UI, and serverless PayOS endpoints.",
         "Comprehensive automated verification via Tram25H.Tests (CheckoutPricingTests, PayOSServiceTests, OrderStatusTransitionTests) and Tram25H.SqlIntegrationTests."
       ],
       architectureNotes: [
         "Strict checkout policy enforcement isolated in testable services (CartSessionService, ProductSelectionService, PayOSService).",
         "Dedicated Tram25H.SqlIntegrationTests provisions and validates real SQL Server schemas cleanly.",
-        "Companion repository Peo051/Coffee_Shop_Management_Web (2025) implements HTML/CSS/JS/Bootstrap ordering UI, Firebase Auth, and serverless PayOS endpoints."
+        "Companion repository Peo051/Coffee_Shop_Management_Web is live on Vercel at https://giborcoffee.vercel.app/ (GIBOR COFFEE) with HTML/CSS/JS/Bootstrap ordering UI, Firebase Auth, and serverless PayOS endpoints."
       ],
       contribution: [
-        "Web Developer (Coffee Shop Ordering Website, 2025): Implemented client-side localStorage persistence, cart, account and loyalty-point flows, mobile-responsive layouts, and checkout logic for totals, discounts, point redemption, COD, QR payments, and serverless PayOS endpoints.",
+        "Web Developer (Coffee Shop Ordering Website / giborcoffee.vercel.app, 2025): Implemented client-side localStorage persistence, cart, account and loyalty-point flows, mobile-responsive layouts, and checkout logic for totals, discounts, point redemption, COD, QR payments, and serverless PayOS endpoints.",
         "Fullstack .NET Developer (Trạm 25H, 2025–2026): Built customer ordering, multi-branch lookup, Admin/BranchManager controllers, REST Web API DTOs, and PayOS payment verification flows in ASP.NET MVC.",
         "Authored unit tests (Tram25H.Tests) and database integration suites (Tram25H.SqlIntegrationTests)."
       ],
-      developmentStatus: "Completed full-stack web solution (DoAnLapTrinhWeb.sln) and companion Coffee Shop Ordering Website verified with unit and SQL integration tests."
+      developmentStatus: "Companion storefront deployed live on Vercel (giborcoffee.vercel.app); full-stack ASP.NET MVC & Web API solution (DoAnLapTrinhWeb.sln) verified with unit and SQL integration tests."
     },
     vi: {
-      summary: "Nền tảng web đặt món và quản lý chuỗi cà phê đa chi nhánh Trạm 25H trên ASP.NET MVC & Web API, phát triển nối tiếp từ website đặt món Coffee Shop Ordering Website (Firebase Auth, PayOS Serverless, PayOS QR).",
-      overview: "Hệ thống kết hợp giải pháp backend ASP.NET MVC (Peo051/Tram25H) cùng website đặt món Coffee Shop Ordering Website năm 2025 (Peo051/Coffee_Shop_Management_Web). Khách hàng đặt món theo chi nhánh, lưu giỏ hàng và tích điểm (localStorage / Firebase Auth), tính giảm giá/đổi điểm và thanh toán COD hoặc PayOS QR.",
+      summary: "Nền tảng web đặt món và quản lý chuỗi cà phê đa chi nhánh Trạm 25H trên ASP.NET MVC & Web API, kết hợp storefront đặt món đang chạy live trên Vercel tại giborcoffee.vercel.app (Firebase Auth, PayOS Serverless, PayOS QR).",
+      overview: "Hệ thống kết hợp giải pháp backend ASP.NET MVC (Peo051/Tram25H) cùng website đặt món Coffee Shop Ordering Website năm 2025 (Peo051/Coffee_Shop_Management_Web), đang triển khai trực tuyến dưới tên GIBOR COFFEE tại https://giborcoffee.vercel.app/. Khách hàng đặt món theo chi nhánh, lưu giỏ hàng và tích điểm (localStorage / Firebase Auth), tính giảm giá/đổi điểm và thanh toán COD hoặc PayOS QR.",
       problem: "Vận hành chuỗi quán cà phê nhiều chi nhánh đòi hỏi đồng bộ giá và tồn món theo từng cơ sở, kiểm soát trạng thái đơn hàng chặt chẽ và bảo vệ chính sách giỏ hàng khi thanh toán PayOS trực tuyến.",
-      solution: "Tổ chức rõ ràng các controller ASP.NET MVC, khu vực quản trị Areas/Admin và Web API (/api/products) kèm bộ test SQL, kết hợp nền tảng Website Đặt món 2025 sử dụng JavaScript, Bootstrap, Firebase Authentication và Vercel Serverless Functions cho PayOS.",
+      solution: "Tổ chức rõ ràng các controller ASP.NET MVC, khu vực quản trị Areas/Admin và Web API (/api/products) kèm bộ test SQL, kết hợp Website Đặt món đang vận hành live trên Vercel (giborcoffee.vercel.app) sử dụng JavaScript, Bootstrap, Firebase Authentication và Vercel Serverless Functions cho PayOS.",
       features: [
         "Đặt đồ uống theo chi nhánh, tính tổng đơn, áp mã giảm giá, đổi điểm thưởng, thanh toán COD hoặc quét mã PayOS QR.",
         "Phân quyền tách biệt Admin toàn hệ thống và BranchManager theo chi nhánh trong Areas/Admin.",
-        "Website đặt món 2025 hỗ trợ lưu trữ phía client (localStorage), đăng nhập Firebase Authentication, giao diện Bootstrap responsive và các endpoint Vercel Serverless cho PayOS.",
+        "Website đặt món live tại giborcoffee.vercel.app hỗ trợ lưu trữ phía client (localStorage), đăng nhập Firebase Authentication, giao diện sáng/tối responsive và các endpoint Vercel Serverless cho PayOS.",
         "Kiểm thử tự động hóa nghiệp vụ qua CheckoutPricingTests, PayOSServiceTests, OrderStatusTransitionTests và SQL Integration Tests."
       ],
       architectureNotes: [
         "Tách các chính sách tính giá, chọn chi nhánh và trạng thái đơn thành service dễ kiểm thử đơn vị.",
         "Dự án Tram25H.SqlIntegrationTests tự khởi tạo schema và kiểm tra truy vấn trên SQL Server thực tế.",
-        "Repository song hành Peo051/Coffee_Shop_Management_Web (2025) sử dụng JavaScript, HTML, CSS, Bootstrap, localStorage, Firebase Auth và Vercel Serverless Functions."
+        "Repository song hành Peo051/Coffee_Shop_Management_Web đang triển khai live trên Vercel tại https://giborcoffee.vercel.app/ (GIBOR COFFEE) với JavaScript, HTML, CSS, Bootstrap, localStorage, Firebase Auth và Vercel Serverless Functions."
       ],
       contribution: [
-        "Web Developer (Coffee Shop Ordering Website, 2025): Triển khai lưu trữ phía client bằng localStorage, giỏ hàng, luồng tài khoản & tích điểm, bố cục di động responsive và logic thanh toán (tổng đơn, giảm giá, đổi điểm, COD, QR kèm serverless PayOS endpoints).",
+        "Web Developer (Coffee Shop Ordering Website / giborcoffee.vercel.app, 2025): Triển khai lưu trữ phía client bằng localStorage, giỏ hàng, luồng tài khoản & tích điểm, bố cục di động responsive và logic thanh toán (tổng đơn, giảm giá, đổi điểm, COD, QR kèm serverless PayOS endpoints).",
         "Fullstack .NET Developer (Trạm 25H, 2025–2026): Xây dựng luồng đặt hàng đa chi nhánh, kiểm chứng thanh toán PayOS và phân khu quản trị ASP.NET MVC.",
         "Viết bộ unit test nghiệp vụ và kiểm thử tích hợp SQL Server."
       ],
-      developmentStatus: "Đã hoàn thành giải pháp web ASP.NET MVC & Web API cùng website Coffee Shop Ordering Website (kèm unit test và SQL test)."
+      developmentStatus: "Storefront đồng hành đang chạy bản live trên Vercel (giborcoffee.vercel.app); giải pháp ASP.NET MVC & Web API đã hoàn thiện cùng bộ unit test và SQL test."
     }
   },
   {

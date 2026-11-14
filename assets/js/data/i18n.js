@@ -162,7 +162,7 @@ export const i18n = {
       achievements: {
         eyebrow: "Achievements & Research",
         title: "Conference papers and academic honors.",
-        lead: "Two second-author conference papers presented at FAIR 2026 (FAIR XIX) alongside HUIT database design, research, and data science awards."
+        lead: "Lead-author and co-author conference papers presented at FAIR 2026 (FAIR XIX) alongside HUIT database design, research, and data science awards."
       },
       resume: {
         eyebrow: "Resume",
@@ -210,8 +210,8 @@ export const i18n = {
       researchIntro: "Distinguishing four HUIT university-level S&T research topics from conference presentations at FAIR 2026 (FAIR XIX), with exact verified roles and timelines.",
       universityResearchGroupTitle: "University S&T Research Topics (HUIT · 4 Topics)",
       universityResearchGroupIntro: "Official university-level scientific research projects covering dynamic negative-utility itemset mining, evolutionary logistics optimization, and multimodal NLP datasets.",
-      conferenceGroupTitle: "Conference Presentations (FAIR 2026 / FAIR XIX)",
-      conferenceGroupIntro: "Research papers presented on 08/10/2026 at Ho Chi Minh City University of Industry and Trade (HUIT).",
+      conferenceGroupTitle: "Conference Presentations (FAIR 2026 · FAIR XIX)",
+      conferenceGroupIntro: "Research papers presented on 08/10/2026 at the 19th National Scientific Conference on Fundamental and Applied Information Technology Research – FAIR 2026 (HUIT).",
       conferenceBadge: "Conference Presentation",
       researchTypeLabel: "Category",
       researchRoleLabel: "Role",
@@ -502,7 +502,7 @@ export const i18n = {
       achievements: {
         eyebrow: "Thành tích & Nghiên cứu",
         title: "Bài báo hội nghị & Giải thưởng học thuật.",
-        lead: "Hai bài báo đồng tác giả trình bày tại hội nghị FAIR 2026 (FAIR XIX) cùng các giải thưởng Thiết kế CSDL, NCKH Sinh viên và Data Science tại HUIT."
+        lead: "Hai bài báo khoa học (tác giả chính và đồng tác giả) trình bày tại Hội nghị Khoa học Quốc gia lần thứ XIX về Nghiên cứu cơ bản và Ứng dụng Công nghệ thông tin – FAIR 2026 cùng các giải thưởng tại HUIT."
       },
       resume: {
         eyebrow: "Hồ sơ / CV",
@@ -550,8 +550,8 @@ export const i18n = {
       researchIntro: "Tách bạch rõ 04 đề tài nghiên cứu khoa học cấp trường tại HUIT và 02 bài báo trình bày tại hội nghị FAIR 2026 với vai trò, thời gian và trạng thái thực tế.",
       universityResearchGroupTitle: "Đề tài NCKH cấp trường (HUIT · 04 đề tài)",
       universityResearchGroupIntro: "Các đề tài nghiên cứu khoa học sinh viên và cấp trường về khai thác dữ liệu hữu ích âm, tối ưu vận chuyển bằng thuật toán tiến hóa và bộ dữ liệu đa phương thức tiếng Việt.",
-      conferenceGroupTitle: "Bài báo Hội nghị Khoa học (FAIR 2026 / FAIR XIX)",
-      conferenceGroupIntro: "Các công trình trình bày ngày 08/10/2026 tại Trường Đại học Công Thương TP.HCM (HUIT).",
+      conferenceGroupTitle: "Bài báo Hội nghị Khoa học (FAIR 2026 · FAIR XIX)",
+      conferenceGroupIntro: "Các công trình trình bày ngày 08/10/2026 tại Hội nghị Khoa học Quốc gia lần thứ XIX về Nghiên cứu cơ bản và Ứng dụng Công nghệ thông tin – FAIR 2026 (HUIT).",
       conferenceBadge: "Trình bày Hội nghị",
       researchTypeLabel: "Phân loại",
       researchRoleLabel: "Vai trò",

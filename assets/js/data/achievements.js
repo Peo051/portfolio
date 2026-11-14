@@ -116,42 +116,42 @@ export const researchProjects = {
 export const researchPapers = {
   en: [
     {
-      id: "fair-2026-sft",
-      typeBadge: "Conference Presentation · FAIR 2026",
-      date: "08/10/2026",
-      title: "SFT: Fourier-Guided Starfish Optimization for 3D E-Commerce Packing",
-      year: "2026",
-      role: "Second author",
-      venue: "Presented at FAIR 2026 (FAIR XIX), HUIT, October 8, 2026."
-    },
-    {
       id: "fair-2026-truck",
       typeBadge: "Conference Presentation · FAIR 2026",
       date: "08/10/2026",
       title: "Genetic Starfish Optimization for Constrained Three-Dimensional Truck Loading",
       year: "2026",
-      role: "Second author",
-      venue: "Presented at FAIR 2026 (FAIR XIX), HUIT, October 8, 2026."
+      role: "Lead Author",
+      venue: "Presented at the 19th National Scientific Conference on Fundamental and Applied Information Technology Research (Hội nghị Khoa học Quốc gia lần thứ XIX về Nghiên cứu cơ bản và Ứng dụng Công nghệ thông tin – FAIR 2026), HUIT, October 8, 2026."
+    },
+    {
+      id: "fair-2026-sft",
+      typeBadge: "Conference Presentation · FAIR 2026",
+      date: "08/10/2026",
+      title: "SFT: Fourier-Guided Starfish Optimization for 3D E-Commerce Packing",
+      year: "2026",
+      role: "Co-author",
+      venue: "Presented at the 19th National Scientific Conference on Fundamental and Applied Information Technology Research (Hội nghị Khoa học Quốc gia lần thứ XIX về Nghiên cứu cơ bản và Ứng dụng Công nghệ thông tin – FAIR 2026), HUIT, October 8, 2026."
     }
   ],
   vi: [
     {
-      id: "fair-2026-sft",
-      typeBadge: "Bài trình bày Hội nghị · FAIR 2026",
-      date: "08/10/2026",
-      title: "SFT: Fourier-Guided Starfish Optimization for 3D E-Commerce Packing",
-      year: "2026",
-      role: "Tác giả thứ hai (Second author)",
-      venue: "Trình bày tại Hội nghị Quốc gia FAIR 2026 (FAIR XIX), HUIT, ngày 08/10/2026."
-    },
-    {
       id: "fair-2026-truck",
       typeBadge: "Bài trình bày Hội nghị · FAIR 2026",
       date: "08/10/2026",
       title: "Genetic Starfish Optimization for Constrained Three-Dimensional Truck Loading",
       year: "2026",
-      role: "Tác giả thứ hai (Second author)",
-      venue: "Trình bày tại Hội nghị Quốc gia FAIR 2026 (FAIR XIX), HUIT, ngày 08/10/2026."
+      role: "Tác giả chính",
+      venue: "Trình bày tại Hội nghị Khoa học Quốc gia lần thứ XIX về Nghiên cứu cơ bản và Ứng dụng Công nghệ thông tin – FAIR 2026, HUIT, ngày 08/10/2026."
+    },
+    {
+      id: "fair-2026-sft",
+      typeBadge: "Bài trình bày Hội nghị · FAIR 2026",
+      date: "08/10/2026",
+      title: "SFT: Fourier-Guided Starfish Optimization for 3D E-Commerce Packing",
+      year: "2026",
+      role: "Đồng tác giả",
+      venue: "Trình bày tại Hội nghị Khoa học Quốc gia lần thứ XIX về Nghiên cứu cơ bản và Ứng dụng Công nghệ thông tin – FAIR 2026, HUIT, ngày 08/10/2026."
     }
   ]
 };

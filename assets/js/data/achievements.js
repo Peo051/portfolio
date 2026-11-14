@@ -3,18 +3,17 @@
 export const researchProjects = {
   en: [
     {
-      id: "research-01-huim",
+      id: "research-04-multimodal",
       code: "01",
-      title: "Khai thác tập hữu ích cao chiều trên cơ sở dữ liệu giao dịch động có lợi ích âm",
-      subtitle: "High-Utility Itemset Mining on Dynamic Transaction Databases with Negative Utility",
+      title: "Xây dựng bộ dữ liệu đa phương thức tiếng Việt phục vụ phát hiện nội dung độc hại trong bài đăng và bình luận trên mạng xã hội",
+      subtitle: "Construction of a Vietnamese Multimodal Dataset for Detecting Toxic Content in Social Media Posts and Comments",
       type: "University-level S&T Research Project · HUIT",
-      period: "01/07/2025 – 30/06/2026",
-      role: "Core Member (Thành viên chính)",
+      period: "04/01/2027 – 03/01/2028",
+      role: "Principal Investigator (Chủ nhiệm đề tài)",
       statusKey: "in-progress",
       statusLabel: "In Progress",
-      focus: ["High-Utility Itemset Mining", "Data Mining", "Algorithms"],
-      projectLink: "#/project/high-utility-itemset-mining",
-      projectLinkLabel: "Inspect HUI-Miner Implementation"
+      focus: ["Vietnamese NLP", "Multimodal Datasets", "Toxic Content Detection"],
+      projectLink: null
     },
     {
       id: "research-02-gso",
@@ -43,33 +42,33 @@ export const researchProjects = {
       projectLink: null
     },
     {
-      id: "research-04-multimodal",
+      id: "research-01-huim",
       code: "04",
-      title: "Nghiên cứu và xây dựng bộ dữ liệu đa phương thức tiếng Việt phục vụ bài toán phát hiện nội dung độc hại trên mạng xã hội",
-      subtitle: "Research and Construction of a Vietnamese Multimodal Dataset for Social Media Toxic Content Detection",
+      title: "Khai thác tập hữu ích cao chiều trên cơ sở dữ liệu giao dịch động có lợi ích âm",
+      subtitle: "High-Utility Itemset Mining on Dynamic Transaction Databases with Negative Utility",
       type: "University-level S&T Research Project · HUIT",
-      period: "04/01/2027 – 03/01/2028",
-      role: "Principal Investigator (Chủ nhiệm đề tài)",
-      statusKey: "upcoming",
-      statusLabel: "Upcoming · Planned (Starts 04/01/2027)",
-      focus: ["Vietnamese NLP", "Multimodal Datasets", "Toxic Content Detection"],
-      projectLink: null
+      period: "01/07/2025 – 30/06/2026",
+      role: "Core Member (Thành viên chính)",
+      statusKey: "in-progress",
+      statusLabel: "In Progress",
+      focus: ["High-Utility Itemset Mining", "Data Mining", "Algorithms"],
+      projectLink: "#/project/high-utility-itemset-mining",
+      projectLinkLabel: "Inspect HUI-Miner Implementation"
     }
   ],
   vi: [
     {
-      id: "research-01-huim",
+      id: "research-04-multimodal",
       code: "01",
-      title: "Khai thác tập hữu ích cao chiều trên cơ sở dữ liệu giao dịch động có lợi ích âm",
-      subtitle: "High-Utility Itemset Mining (CL-HUIM) trên CSDL giao dịch động có lợi ích âm",
+      title: "Xây dựng bộ dữ liệu đa phương thức tiếng Việt phục vụ phát hiện nội dung độc hại trong bài đăng và bình luận trên mạng xã hội",
+      subtitle: "Xây dựng bộ dữ liệu đa phương thức tiếng Việt phát hiện nội dung độc hại trong bài đăng và bình luận",
       type: "Đề tài KH&CN cấp trường · HUIT",
-      period: "01/07/2025 – 30/06/2026",
-      role: "Thành viên chính",
+      period: "04/01/2027 – 03/01/2028",
+      role: "Chủ nhiệm đề tài",
       statusKey: "in-progress",
       statusLabel: "Đang thực hiện",
-      focus: ["High-Utility Itemset Mining", "Data Mining", "Algorithms"],
-      projectLink: "#/project/high-utility-itemset-mining",
-      projectLinkLabel: "Xem mã nguồn & thực nghiệm HUI-Miner"
+      focus: ["Vietnamese NLP", "Multimodal Datasets", "Toxic Content Detection"],
+      projectLink: null
     },
     {
       id: "research-02-gso",
@@ -98,17 +97,18 @@ export const researchProjects = {
       projectLink: null
     },
     {
-      id: "research-04-multimodal",
+      id: "research-01-huim",
       code: "04",
-      title: "Nghiên cứu và xây dựng bộ dữ liệu đa phương thức tiếng Việt phục vụ bài toán phát hiện nội dung độc hại trên mạng xã hội",
-      subtitle: "Xây dựng bộ dữ liệu đa phương thức tiếng Việt cho bài toán phát hiện nội dung độc hại",
+      title: "Khai thác tập hữu ích cao chiều trên cơ sở dữ liệu giao dịch động có lợi ích âm",
+      subtitle: "High-Utility Itemset Mining (CL-HUIM) trên CSDL giao dịch động có lợi ích âm",
       type: "Đề tài KH&CN cấp trường · HUIT",
-      period: "04/01/2027 – 03/01/2028",
-      role: "Chủ nhiệm đề tài",
-      statusKey: "upcoming",
-      statusLabel: "Sắp triển khai (Bắt đầu 04/01/2027)",
-      focus: ["Vietnamese NLP", "Multimodal Datasets", "Toxic Content Detection"],
-      projectLink: null
+      period: "01/07/2025 – 30/06/2026",
+      role: "Thành viên chính",
+      statusKey: "in-progress",
+      statusLabel: "Đang thực hiện",
+      focus: ["High-Utility Itemset Mining", "Data Mining", "Algorithms"],
+      projectLink: "#/project/high-utility-itemset-mining",
+      projectLinkLabel: "Xem mã nguồn & thực nghiệm HUI-Miner"
     }
   ]
 };

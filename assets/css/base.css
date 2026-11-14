@@ -33,7 +33,7 @@ body {
   font-family: var(--font-sans);
   font-size: var(--text-base);
   line-height: 1.65;
-  overflow-x: hidden;
+  overflow-x: clip;
   transition: background-color var(--dur-base) ease, color var(--dur-base) ease;
 }
 

@@ -1573,9 +1573,9 @@ a.proof-item:hover {
 
 @media (min-width: 960px) {
   .resume-grid {
-    grid-template-columns: minmax(290px, 0.34fr) minmax(0, 0.66fr);
+    grid-template-columns: minmax(290px, 350px) minmax(0, 1fr);
     align-items: start;
-    gap: var(--space-7);
+    gap: var(--space-8);
   }
 }
 
@@ -2136,15 +2136,21 @@ a.proof-item:hover {
   flex-direction: column;
   gap: var(--space-4);
   min-width: 0;
+  max-width: 100%;
   overflow-wrap: anywhere;
+}
+
+.resume-sidebar:hover {
+  box-shadow: var(--shadow-sm);
 }
 
 @media (min-width: 960px) {
   .resume-sidebar {
     position: sticky;
-    top: calc(var(--nav-height, 72px) + var(--space-5));
-    max-height: calc(100vh - var(--nav-height, 72px) - var(--space-7));
+    top: calc(var(--header-h, 72px) + var(--space-5));
+    max-height: calc(100vh - var(--header-h, 72px) - var(--space-6));
     overflow-y: auto;
+    overflow-x: hidden;
     scrollbar-width: thin;
   }
 }
@@ -2521,7 +2527,7 @@ a.proof-item:hover {
 }
 
 .research-group + .research-group {
-  margin-top: var(--space-7);
+  margin-top: var(--space-8);
 }
 
 .research-group-head {
@@ -2716,9 +2722,9 @@ a.proof-item:hover {
   align-items: start;
 }
 
-@media (min-width: 840px) {
+@media (min-width: 1120px) {
   .resume-credentials-split {
-    grid-template-columns: minmax(0, 1.45fr) minmax(0, 0.55fr);
+    grid-template-columns: minmax(0, 1fr) minmax(200px, 0.42fr);
   }
 }
 
